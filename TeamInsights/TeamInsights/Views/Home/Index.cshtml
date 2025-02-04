@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    body {
+        background-image: url('/images/background.webp'); /* Path to your image in the root/images folder */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh; /* Full viewport height */
+        margin: 0; /* Remove default margin */
+    }
+
+    .text-center {
+        color: white; /* Makes text visible on the background */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow to text */
+    }
+</style>
+
+
+<!-- Main Content Section -->
+<div id="content-container" style="background-color: rgba(255, 255, 255, 1.0); width: 100%; padding: 0; margin: 0;">
+
+    <!-- Main Content Over Background -->
+    <div class="left-section" style="width: 100%; text-align: center;">
+        <h2 id="Team-insights-header">Team Insights</h2>
+        <p class="Team-insights-content">
+            Team Insights is a powerful platform for tracking and visualizing Team progress, timelines, and team performance.
+            With real-time updates and detailed reports, it helps teams make informed decisions and stay on track.
+        </p>
+
+        <!-- Two Buttons with Hover Effects -->
+        <div class="button-container">
+            <a asp-controller="Home" asp-action="about" class="button">Learn More<i class="fa-solid fa-angles-right"></i></a>
+            <a asp-controller="Home" asp-action="Features" class="button button-secondary">Get Started</a>
+        </div>
+    </div>
+</div>
+
