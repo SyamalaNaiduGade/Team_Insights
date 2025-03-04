@@ -9,9 +9,12 @@ namespace TeamInsights.Models
 
         [Required]
         [StringLength(100)]
-        public string Name { get; set; }
+        public string CertificationName { get; set; }
 
-        //Navigation Property
-        public virtual ICollection<EmployeeSkill> EmployeeSkills { get; set; }
+        [StringLength(200)]
+        public string URL { get; set; }
+
+        // Navigation properties
+        public virtual ICollection<EmployeeCertification> EmployeeCertifications { get; set; }
     }
 }

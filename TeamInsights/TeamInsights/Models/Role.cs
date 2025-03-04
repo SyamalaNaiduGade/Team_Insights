@@ -8,11 +8,11 @@ namespace TeamInsights.Models
         public int RoleID { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string Name { get; set; }
+        [StringLength(100)]
+        public string RoleName { get; set; }
 
         // Navigation properties
-        public virtual ICollection<Contribution> Contributions { get; set; }
+        public virtual ICollection<EmployeeRole> EmployeeRoles { get; set; }
 
     }
 }
