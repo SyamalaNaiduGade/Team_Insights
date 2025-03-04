@@ -11,8 +11,10 @@ namespace TeamInsights.Models
         public int Score { get; set; }
 
         [StringLength(500)]
-        public string? Comments { get; set; }
+        public string Comments { get; set; }
 
+        [DataType(DataType.Date)]
+        [Display(Name ="Evaluation Date")]
         public DateTime EvaluationDate { get; set; }
 
         // Navigation properties

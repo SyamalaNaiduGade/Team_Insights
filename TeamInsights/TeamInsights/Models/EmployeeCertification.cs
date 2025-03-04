@@ -16,6 +16,8 @@ namespace TeamInsights.Models
         public int CertificationID { get; set; }
         public virtual Certification Certification { get; set; }
 
+        [DataType(DataType.Date)]
+        [Display(Name ="Issued Date")]
         public DateTime IssuedDate { get; set; }
     }
 }

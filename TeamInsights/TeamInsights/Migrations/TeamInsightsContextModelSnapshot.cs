@@ -285,16 +285,11 @@ namespace TeamInsights.Migrations
                     b.Property<DateTime>("IssuedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("SkillID")
-                        .HasColumnType("int");
-
                     b.HasKey("EmployeeCertificationID");
 
                     b.HasIndex("CertificationID");
 
                     b.HasIndex("EmployeeID");
-
-                    b.HasIndex("SkillID");
 
                     b.ToTable("EmployeeCertifications");
                 });
@@ -357,6 +352,7 @@ namespace TeamInsights.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EvaluationID"));
 
                     b.Property<string>("Comments")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -397,8 +393,8 @@ namespace TeamInsights.Migrations
                     b.Property<int>("ProjectID")
                         .HasColumnType("int");
 
-                    b.Property<int>("Year")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("Year")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("PerformanceID");
 
@@ -433,10 +429,8 @@ namespace TeamInsights.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Experience")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                    b.Property<float>("Experience")
+                        .HasColumnType("real");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -467,7 +461,7 @@ namespace TeamInsights.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("StreetAddress")
+                    b.Property<string>("Street")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
@@ -493,6 +487,7 @@ namespace TeamInsights.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProjectID"));
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -623,10 +618,6 @@ namespace TeamInsights.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TeamInsights.Models.Skill", null)
-                        .WithMany("EmployeeCertifications")
-                        .HasForeignKey("SkillID");
-
                     b.Navigation("Certification");
 
                     b.Navigation("Employee");
@@ -716,7 +707,7 @@ namespace TeamInsights.Migrations
             modelBuilder.Entity("TeamInsights.Models.Person", b =>
                 {
                     b.HasOne("TeamInsights.Models.Person", "Manager")
-                        .WithMany()
+                        .WithMany("Employees")
                         .HasForeignKey("ManagerID");
 
                     b.Navigation("Manager");
@@ -750,6 +741,8 @@ namespace TeamInsights.Migrations
 
                     b.Navigation("EmployeeSkills");
 
+                    b.Navigation("Employees");
+
                     b.Navigation("Performances");
                 });
 
@@ -765,8 +758,6 @@ namespace TeamInsights.Migrations
 
             modelBuilder.Entity("TeamInsights.Models.Skill", b =>
                 {
-                    b.Navigation("EmployeeCertifications");
-
                     b.Navigation("EmployeeSkills");
                 });
 #pragma warning restore 612, 618

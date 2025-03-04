@@ -16,7 +16,8 @@ namespace TeamInsights.Models
         public int SkillID { get; set; }
         public virtual Skill Skill { get; set; }
 
+        [DataType(DataType.Date)]
+        [Display(Name ="Acquired Date")]
         public DateTime AcquiredDate { get; set; }
-
     }
 }

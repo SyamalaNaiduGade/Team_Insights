@@ -186,12 +186,212 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Certifications/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VydGlmaWNhdGlvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Certifications/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VydGlmaWNhdGlvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Certifications/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VydGlmaWNhdGlvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Certifications/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VydGlmaWNhdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Certifications/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VydGlmaWNhdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Contributions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJpYnV0aW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Contributions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJpYnV0aW9uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Contributions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJpYnV0aW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Contributions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJpYnV0aW9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Contributions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJpYnV0aW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeCertifications/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVDZXJ0aWZpY2F0aW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeCertifications/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVDZXJ0aWZpY2F0aW9uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeCertifications/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVDZXJ0aWZpY2F0aW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeCertifications/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVDZXJ0aWZpY2F0aW9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeCertifications/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVDZXJ0aWZpY2F0aW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeRoles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVSb2xlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeRoles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVSb2xlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeRoles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVSb2xlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeRoles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVSb2xlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVSb2xlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeSkills/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeSkills/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeSkills/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeSkills/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/EmployeeSkills/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Evaluations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhdGlvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Evaluations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhdGlvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Evaluations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhdGlvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Evaluations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Evaluations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/People/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/People/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/People/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/People/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/People/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Performances/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZm9ybWFuY2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Performances/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZm9ybWFuY2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Performances/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZm9ybWFuY2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Performances/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZm9ybWFuY2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Performances/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZm9ybWFuY2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Projects/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Projects/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Projects/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Projects/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Projects/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Roles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Roles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Roles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Roles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Shared/Error.cshtml]
@@ -204,6 +404,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Skills/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Skills/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Skills/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Skills/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/Skills/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/syama/OneDrive/Desktop/Team_Insights_sprint_2_MVP/Team_Insights/TeamInsights/TeamInsights/Views/_ViewImports.cshtml]

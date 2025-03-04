@@ -591,3 +591,11 @@ C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamIns
 C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\obj\Debug\net8.0\TeamInsights.pdb
 C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\obj\Debug\net8.0\TeamInsights.genruntimeconfig.cache
 C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\obj\Debug\net8.0\ref\TeamInsights.dll
+C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
+C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.JSInterop.dll

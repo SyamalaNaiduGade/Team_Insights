@@ -7,7 +7,9 @@ namespace TeamInsights.Models
     {
         [Key]
         public int ContributionID { get; set; }
-
+        
+        [DataType(DataType.Date)]
+        [Display(Name = "Contribution Date")]
         public DateTime ContributionDate { get; set; }
 
         [StringLength(500)]

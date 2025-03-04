@@ -31,11 +31,11 @@ namespace TeamInsights
 
         public static async Task EnsureTestAdminAsync(UserManager<IdentityUser> userManager)
         {
-            var testAdmin = await userManager.Users.Where(x => x.UserName == "TeamInsightsadmin@mail.com").SingleOrDefaultAsync();
+            var testAdmin = await userManager.Users.Where(x => x.UserName == "teaminsightsadmin@mail.com").SingleOrDefaultAsync();
 
             if (testAdmin != null) return;
 
-            testAdmin = new IdentityUser { UserName = "TeamInsightsadmin@mail.com", Email = "TeamInsightsadmin@mail.com" };
+            testAdmin = new IdentityUser { UserName = "teaminsightsadmin@mail.com", Email = "teaminsightsadmin@mail.com" };
 
             await userManager.CreateAsync(testAdmin, "Admin@123");
 

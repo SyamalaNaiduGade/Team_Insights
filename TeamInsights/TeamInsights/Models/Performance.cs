@@ -28,8 +28,10 @@ namespace TeamInsights.Models
         public int EvaluationID { get; set; }
         public virtual Evaluation Evaluation { get; set; }
 
+        [Display(Name ="Hours Worked")]
         public double HoursWorked { get; set; }
 
-        public int Year { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime Year { get; set; }
     }
 }

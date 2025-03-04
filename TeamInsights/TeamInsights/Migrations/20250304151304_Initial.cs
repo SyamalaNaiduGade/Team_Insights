@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TeamInsights.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -85,7 +85,7 @@ namespace TeamInsights.Migrations
                     EvaluationID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Score = table.Column<int>(type: "int", nullable: false),
-                    Comments = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    Comments = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     EvaluationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -103,12 +103,12 @@ namespace TeamInsights.Migrations
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    StreetAddress = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Street = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     City = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     State = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ZipCode = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     HireDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Experience = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    Experience = table.Column<float>(type: "real", nullable: false),
                     Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     ManagerID = table.Column<int>(type: "int", nullable: true)
                 },
@@ -131,7 +131,7 @@ namespace TeamInsights.Migrations
                     ProjectName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -273,6 +273,33 @@ namespace TeamInsights.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "EmployeeCertifications",
+                columns: table => new
+                {
+                    EmployeeCertificationID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EmployeeID = table.Column<int>(type: "int", nullable: false),
+                    CertificationID = table.Column<int>(type: "int", nullable: false),
+                    IssuedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EmployeeCertifications", x => x.EmployeeCertificationID);
+                    table.ForeignKey(
+                        name: "FK_EmployeeCertifications_Certifications_CertificationID",
+                        column: x => x.CertificationID,
+                        principalTable: "Certifications",
+                        principalColumn: "CertificationID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EmployeeCertifications_People_EmployeeID",
+                        column: x => x.EmployeeID,
+                        principalTable: "People",
+                        principalColumn: "PersonID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "EmployeeRoles",
                 columns: table => new
                 {
@@ -296,39 +323,6 @@ namespace TeamInsights.Migrations
                         principalTable: "Roles",
                         principalColumn: "RoleID",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "EmployeeCertifications",
-                columns: table => new
-                {
-                    EmployeeCertificationID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    EmployeeID = table.Column<int>(type: "int", nullable: false),
-                    CertificationID = table.Column<int>(type: "int", nullable: false),
-                    IssuedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    SkillID = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_EmployeeCertifications", x => x.EmployeeCertificationID);
-                    table.ForeignKey(
-                        name: "FK_EmployeeCertifications_Certifications_CertificationID",
-                        column: x => x.CertificationID,
-                        principalTable: "Certifications",
-                        principalColumn: "CertificationID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_EmployeeCertifications_People_EmployeeID",
-                        column: x => x.EmployeeID,
-                        principalTable: "People",
-                        principalColumn: "PersonID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_EmployeeCertifications_Skills_SkillID",
-                        column: x => x.SkillID,
-                        principalTable: "Skills",
-                        principalColumn: "SkillID");
                 });
 
             migrationBuilder.CreateTable(
@@ -370,7 +364,7 @@ namespace TeamInsights.Migrations
                     ContributionID = table.Column<int>(type: "int", nullable: false),
                     EvaluationID = table.Column<int>(type: "int", nullable: false),
                     HoursWorked = table.Column<double>(type: "float", nullable: false),
-                    Year = table.Column<int>(type: "int", nullable: false)
+                    Year = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -455,11 +449,6 @@ namespace TeamInsights.Migrations
                 name: "IX_EmployeeCertifications_EmployeeID",
                 table: "EmployeeCertifications",
                 column: "EmployeeID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_EmployeeCertifications_SkillID",
-                table: "EmployeeCertifications",
-                column: "SkillID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_EmployeeRoles_EmployeeID",

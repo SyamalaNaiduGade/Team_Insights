@@ -9,9 +9,11 @@ namespace TeamInsights.Models
 
         [Required]
         [StringLength(100)]
+        [Display(Name ="Skill Name")]
         public string SkillName { get; set; }
 
         [StringLength(100)]
+        [Display(Name = "Skill Level")]
         public string SkillLevel { get; set; }
 
         [StringLength(500)]
@@ -19,6 +21,5 @@ namespace TeamInsights.Models
 
         // Navigation properties
         public virtual ICollection<EmployeeSkill> EmployeeSkills { get; set; }
-        public virtual ICollection<EmployeeCertification> EmployeeCertifications { get; set; }
     }
 }
