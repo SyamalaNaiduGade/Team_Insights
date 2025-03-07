@@ -1,39 +1,51 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Index";
 }
-<style>
-    body {
-        background-image: url('/images/background.webp'); /* Path to your image in the root/images folder */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100vh; /* Full viewport height */
-        margin: 0; /* Remove default margin */
-    }
 
-    .text-center {
-        color: white; /* Makes text visible on the background */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow to text */
-    }
-</style>
-
-
-<!-- Main Content Section -->
-<div id="content-container" style="background-color: rgba(255, 255, 255, 1.0); width: 100%; padding: 0; margin: 0;">
-
-    <!-- Main Content Over Background -->
-    <div class="left-section" style="width: 100%; text-align: center;">
-        <h2 id="Team-insights-header">Team Insights</h2>
-        <p class="Team-insights-content">
-            Team Insights is a powerful platform for tracking and visualizing Team progress, timelines, and team performance.
-            With real-time updates and detailed reports, it helps teams make informed decisions and stay on track.
-        </p>
-
-        <!-- Two Buttons with Hover Effects -->
-        <div class="button-container">
-            <a asp-controller="Home" asp-action="about" class="button">Learn More<i class="fa-solid fa-angles-right"></i></a>
-            <a asp-controller="Home" asp-action="Features" class="button button-secondary">Get Started</a>
+<div class="container-fluid d-flex">
+    <!-- Sidebar -->
+    <aside class="sidebar d-flex flex-column p-3" style="width: 250px;">
+        @* <h2 class="logo text-center">Team Insights Management System</h2> *@
+        <video id="logo-video" autoplay playsinline muted>
+            <source src="~/Images/logo.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <ul class="nav flex-column">
+                <li><a asp-controller="Home" asp-action="Index" class="nav-link active">Home</a></li>
+                <li><a asp-controller="Projects" asp-action="Index" class="nav-link">Projects</a></li>
+                <li><a asp-controller="People" asp-action="Index" class="nav-link">People</a></li>
+                <li><a asp-controller="Performances" asp-action="Index" class="nav-link">Performance Tracking</a></li>
+                <li><a asp-controller="Evaluations" asp-action="Index" class="nav-link">Evaluations</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile mt-auto">
+            <button class="profile-btn d-flex align-items-center border p-2 rounded-3 shadow-sm w-100">
+                <img src="images/uifaces-popular-image.jpg" alt="User Avatar" class="avatar rounded-circle me-3" style="width: 40px; height: 40px;">
+                <div>
+                    <p class="m-0"><strong>Caitlyn Kling</strong></p>
+                    <span class="small">caitlyn@company.com</span>
+                </div>
+            </button>
+            <div class="dropdown-menu mt-2">
+                <a href="#" class="dropdown-item">Profile</a>
+                <a href="#" class="dropdown-item">Settings</a>
+                <a href="#" class="dropdown-item">Logout</a>
+            </div>
         </div>
-    </div>
-</div>
+    </aside>
 
+    <!-- Main Content -->
+    <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
+        <h1>Home</h1>
+        @* <div class="tabs">
+            <a href="#" class="tab-link">Account</a>
+            <a href="#" class="tab-link active">Appearance</a>
+            <a href="#" class="tab-link">Profile</a>
+            <a href="#" class="tab-link">Security</a>
+            <a href="#" class="tab-link">Notifications</a>
+            <a href="#" class="tab-link">Billing</a>
+            <a href="#" class="tab-link">Integrations</a>
+        </div> *@
+        
+    </main>
+</div>

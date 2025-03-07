@@ -8654,23 +8654,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\syama\\.nuget\\packages\\": {},
+    "C:\\Users\\erica\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\syama\\OneDrive\\Desktop\\Team_Insights_sprint_2_MVP\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
+      "projectUniqueName": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 3-4\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
       "projectName": "TeamInsights",
-      "projectPath": "C:\\Users\\syama\\OneDrive\\Desktop\\Team_Insights_sprint_2_MVP\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
-      "packagesPath": "C:\\Users\\syama\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\syama\\OneDrive\\Desktop\\Team_Insights_sprint_2_MVP\\Team_Insights\\TeamInsights\\TeamInsights\\obj\\",
+      "projectPath": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 3-4\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
+      "packagesPath": "C:\\Users\\erica\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 3-4\\Team_Insights\\TeamInsights\\TeamInsights\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\syama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\erica\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8679,6 +8679,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8691,7 +8692,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -8749,7 +8756,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
