@@ -599,10 +599,10 @@ C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamIns
 C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
 C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\syama\OneDrive\Desktop\Team_Insights_sprint_2_MVP\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\Microsoft.JSInterop.dll
-C:\Users\erica\OneDrive\Documents\ISC 568\Repos\CLONE 3-4\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\erica\OneDrive\Documents\ISC 568\Repos\CLONE 3-4\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\appsettings.json
 C:\Users\erica\OneDrive\Documents\ISC 568\Repos\CLONE 3-4\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\TeamInsights.staticwebassets.runtime.json
 C:\Users\erica\OneDrive\Documents\ISC 568\Repos\CLONE 3-4\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\TeamInsights.staticwebassets.endpoints.json
+C:\Users\erica\OneDrive\Documents\ISC 568\Repos\CLONE 3-4\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\erica\OneDrive\Documents\ISC 568\Repos\CLONE 3-4\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\appsettings.json
 C:\Users\erica\OneDrive\Documents\ISC 568\Repos\CLONE 3-4\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\TeamInsights.exe
 C:\Users\erica\OneDrive\Documents\ISC 568\Repos\CLONE 3-4\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\TeamInsights.deps.json
 C:\Users\erica\OneDrive\Documents\ISC 568\Repos\CLONE 3-4\Team_Insights\TeamInsights\TeamInsights\bin\Debug\net8.0\TeamInsights.runtimeconfig.json
