@@ -9,15 +9,15 @@ namespace TeamInsights.Models
         public int EmployeeRoleID { get; set; }
 
         [ForeignKey("Person")]
-        public int EmployeeID { get; set; }
-        public virtual Person Employee { get; set; }
+        public int? EmployeeID { get; set; }
+        public virtual Person? Employee { get; set; }
 
         [ForeignKey("Role")]
-        public int RoleID { get; set; }
-        public virtual Role Role { get; set; }
+        public int? RoleID { get; set; }
+        public virtual Role? Role { get; set; }
 
         // Navigation properties
-        public virtual ICollection<Performance> Performances { get; set; }
+        public virtual ICollection<Performance>? Performances { get; set; }
 
     }
 }

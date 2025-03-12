@@ -24,13 +24,9 @@
             <button class="profile-btn d-flex align-items-center border p-2 rounded-3 shadow-sm w-100">
                 <img src="images/uifaces-popular-image.jpg" alt="User Avatar" class="avatar rounded-circle me-3" style="width: 40px; height: 40px;">
                 <div>
-<<<<<<< HEAD
-                    <p class="m-0"><strong>Alice Johnson</strong></p>
-                    <span class="small">alice@example.com</span>
-=======
                     <p class="m-0"><strong>Team Insights Admin</strong></p>
                     <span class="small">teaminsightsadmin@mail.com</span>
->>>>>>> 9f3c54fd4c3613a240ae8bb34695d2cbe7b8872c
+
                 </div>
             </button>
             <div class="dropdown-menu mt-2">
@@ -75,12 +71,12 @@
                         <p><strong>Start:</strong> Jan 2024 – <strong>End:</strong> June 2024</p>
                         <p><strong>Manager:</strong> Alice Johnson</p>
                         <p><strong>Team:</strong> 👥 6 Employees</p>
-                        <p>
+                        @* <p>
                             <strong>Key Skills:</strong>
                             <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-1">Python</span>
                             <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1">Data Analysis</span>
                             <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">UI Design</span>
-                        </p>
+                        </p> *@
                         <div class="mt-2">
                             <div class="bg-gray-200 rounded-full h-3 w-full">
                                 <div class="bg-blue-500 h-3 rounded-full w-4/5"></div>
@@ -93,12 +89,12 @@
                         <p><strong>Start:</strong> March 2024 – <strong>End:</strong> Aug 2024</p>
                         <p><strong>Manager:</strong> Brian Carter</p>
                         <p><strong>Team:</strong> 👥 5 Employees</p>
-                        <p>
+                        @* <p>
                             <strong>Key Skills:</strong>
                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full mr-1">Agile Review</span>
                             <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full mr-1">Reporting</span>
                             <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">Presentation</span>
-                        </p>
+                        </p> *@
                         <div class="mt-2">
                             <div class="bg-gray-200 rounded-full h-3 w-full">
                                 <div class="bg-green-500 h-3 rounded-full w-2/5"></div>
@@ -110,7 +106,7 @@
             </section>
 
 
-            <!-- Department Heatmap Matrix -->
+            @* <!-- Department Heatmap Matrix -->
             <section class="mb-10">
                 <h2 class="text-2xl font-bold mb-4">Department Heatmap</h2>
                 <div class="overflow-x-auto">
@@ -142,12 +138,12 @@
                         </tbody>
                     </table>
                 </div>
-            </section>
+            </section> *@
 
 
             <!-- Project Completion Trends Chart Placeholder -->
             <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">📈 Project Completion Trends</h2>
+                <h2 class="text-2xl font-bold mb-4">📈 Project Performance Trend Over Time</h2>
                 <div class="bg-white rounded-2xl p-6 shadow-md text-gray-600 text-sm">
                     <canvas id="completionChart" class="w-full h-64"></canvas>
                 </div>
@@ -165,18 +161,18 @@
                             <li>David Chen – 9 Project Contributions</li>
                         </ul>
                     </div>
-                    <div class="bg-white shadow-md rounded-2xl p-4">
+                    @* <div class="bg-white shadow-md rounded-2xl p-4">
                         <h3 class="text-lg font-semibold mb-1">Top Collaboration Tools</h3>
                         <ul class="list-disc list-inside text-gray-700">
                             <li>Slack</li>
                             <li>Jira</li>
                             <li>Microsoft Teams</li>
                         </ul>
-                    </div>
-                    <div class="bg-white shadow-md rounded-2xl p-4">
+                    </div> *@
+                    @* <div class="bg-white shadow-md rounded-2xl p-4">
                         <h3 class="text-lg font-semibold mb-1">Avg. Meetings per Week</h3>
                         <p class="text-gray-700">5 Meetings</p>
-                    </div>
+                    </div> *@
                 </div>
             </section>
 
@@ -186,9 +182,9 @@
                 const completionChart = new Chart(ctx, {
                   type: 'line',
                   data: {
-                    labels: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+                    labels: ['2022', '2023', '2024'],
                     datasets: [{
-                      label: 'Project Completion %',
+                      label: 'Performance Score %',
                       data: [45, 60, 70, 75, 82, 90],
                       borderColor: '#3B82F6',
                       backgroundColor: 'rgba(59, 130, 246, 0.2)',
@@ -215,13 +211,13 @@
                         max: 100,
                         title: {
                           display: true,
-                          text: 'Completion %'
+                          text: 'Manager Evaluation Score %'
                         }
                       },
                       x: {
                         title: {
                           display: true,
-                          text: 'Month'
+                          text: 'Year'
                         }
                       }
                     }

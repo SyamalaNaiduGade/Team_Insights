@@ -9,15 +9,15 @@ namespace TeamInsights.Models
         public int EmployeeCertificationID { get; set; } // surrogate key
 
         [ForeignKey("Person")]
-        public int EmployeeID { get; set; }
-        public virtual Person Employee { get; set; }
+        public int? EmployeeID { get; set; }
+        public virtual Person? Employee { get; set; }
 
         [ForeignKey("Certification")]
-        public int CertificationID { get; set; }
-        public virtual Certification Certification { get; set; }
+        public int? CertificationID { get; set; }
+        public virtual Certification? Certification { get; set; }
 
         [DataType(DataType.Date)]
         [Display(Name ="Issued Date")]
-        public DateTime IssuedDate { get; set; }
+        public DateTime? IssuedDate { get; set; }
     }
 }

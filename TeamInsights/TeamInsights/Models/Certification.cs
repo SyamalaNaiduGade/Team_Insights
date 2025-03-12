@@ -10,13 +10,13 @@ namespace TeamInsights.Models
         [Required]
         [StringLength(100)]
         [Display(Name ="Certificate Name")]
-        public string CertificationName { get; set; }
+        public string? CertificationName { get; set; }
 
         [Url]
         [StringLength(200)]
-        public string URL { get; set; }
+        public string? URL { get; set; }
 
         // Navigation properties
-        public virtual ICollection<EmployeeCertification> EmployeeCertifications { get; set; }
+        public virtual ICollection<EmployeeCertification>? EmployeeCertifications { get; set; }
     }
 }

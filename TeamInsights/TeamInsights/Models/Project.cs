@@ -10,7 +10,7 @@ namespace TeamInsights.Models
 
         [Required]
         [StringLength(100)]
-        public string ProjectName { get; set; }
+        public string? ProjectName { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -22,9 +22,9 @@ namespace TeamInsights.Models
         public DateTime EndDate { get; set; }
 
         [StringLength(500)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         // Navigation properties
-        public virtual ICollection<Performance> Performances { get; set; }
+        public virtual ICollection<Performance>? Performances { get; set; }
     }
 }

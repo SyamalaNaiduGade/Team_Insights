@@ -10,12 +10,12 @@ namespace TeamInsights.Models
         
         [DataType(DataType.Date)]
         [Display(Name = "Contribution Date")]
-        public DateTime ContributionDate { get; set; }
+        public DateTime? ContributionDate { get; set; }
 
         [StringLength(500)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         //Navigation Property
-        public virtual ICollection<Performance> Performances { get; set; }
+        public virtual ICollection<Performance>? Performances { get; set; }
     }
 }
