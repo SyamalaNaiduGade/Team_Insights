@@ -224,6 +224,335 @@ namespace TeamInsights.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("TeamInsights.Models.Certification", b =>
+                {
+                    b.Property<int>("CertificationID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CertificationID"));
+
+                    b.Property<string>("CertificationName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("URL")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("CertificationID");
+
+                    b.ToTable("Certifications");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Contribution", b =>
+                {
+                    b.Property<int>("ContributionID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContributionID"));
+
+                    b.Property<DateTime>("ContributionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("ContributionID");
+
+                    b.ToTable("Contributions");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.EmployeeCertification", b =>
+                {
+                    b.Property<int>("EmployeeCertificationID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmployeeCertificationID"));
+
+                    b.Property<int>("CertificationID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmployeeID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("IssuedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("EmployeeCertificationID");
+
+                    b.HasIndex("CertificationID");
+
+                    b.HasIndex("EmployeeID");
+
+                    b.ToTable("EmployeeCertifications");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.EmployeeRole", b =>
+                {
+                    b.Property<int>("EmployeeRoleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmployeeRoleID"));
+
+                    b.Property<int>("EmployeeID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoleID")
+                        .HasColumnType("int");
+
+                    b.HasKey("EmployeeRoleID");
+
+                    b.HasIndex("EmployeeID");
+
+                    b.HasIndex("RoleID");
+
+                    b.ToTable("EmployeeRoles");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.EmployeeSkill", b =>
+                {
+                    b.Property<int>("EmployeeSkillID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmployeeSkillID"));
+
+                    b.Property<DateTime>("AcquiredDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EmployeeID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SkillID")
+                        .HasColumnType("int");
+
+                    b.HasKey("EmployeeSkillID");
+
+                    b.HasIndex("EmployeeID");
+
+                    b.HasIndex("SkillID");
+
+                    b.ToTable("EmployeeSkills");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Evaluation", b =>
+                {
+                    b.Property<int>("EvaluationID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EvaluationID"));
+
+                    b.Property<string>("Comments")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime>("EvaluationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Score")
+                        .HasColumnType("int");
+
+                    b.HasKey("EvaluationID");
+
+                    b.ToTable("Evaluations");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Performance", b =>
+                {
+                    b.Property<int>("PerformanceID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PerformanceID"));
+
+                    b.Property<int>("ContributionID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmployeeRoleID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EvaluationID")
+                        .HasColumnType("int");
+
+                    b.Property<double>("HoursWorked")
+                        .HasColumnType("float");
+
+                    b.Property<int>("ManagerID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProjectID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Year")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("PerformanceID");
+
+                    b.HasIndex("ContributionID");
+
+                    b.HasIndex("EmployeeRoleID");
+
+                    b.HasIndex("EvaluationID");
+
+                    b.HasIndex("ManagerID");
+
+                    b.HasIndex("ProjectID");
+
+                    b.ToTable("Performances");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Person", b =>
+                {
+                    b.Property<int>("PersonID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonID"));
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<float>("Experience")
+                        .HasColumnType("real");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("HireDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("ManagerID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<decimal>("Salary")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("PersonID");
+
+                    b.HasIndex("ManagerID");
+
+                    b.ToTable("People");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Project", b =>
+                {
+                    b.Property<int>("ProjectID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProjectID"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ProjectName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ProjectID");
+
+                    b.ToTable("Projects");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Role", b =>
+                {
+                    b.Property<int>("RoleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleID"));
+
+                    b.Property<string>("RoleName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("RoleID");
+
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Skill", b =>
+                {
+                    b.Property<int>("SkillID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SkillID"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("SkillLevel")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("SkillName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("SkillID");
+
+                    b.ToTable("Skills");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -273,6 +602,163 @@ namespace TeamInsights.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.EmployeeCertification", b =>
+                {
+                    b.HasOne("TeamInsights.Models.Certification", "Certification")
+                        .WithMany("EmployeeCertifications")
+                        .HasForeignKey("CertificationID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TeamInsights.Models.Person", "Employee")
+                        .WithMany("EmployeeCertifications")
+                        .HasForeignKey("EmployeeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Certification");
+
+                    b.Navigation("Employee");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.EmployeeRole", b =>
+                {
+                    b.HasOne("TeamInsights.Models.Person", "Employee")
+                        .WithMany("EmployeeRoles")
+                        .HasForeignKey("EmployeeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TeamInsights.Models.Role", "Role")
+                        .WithMany("EmployeeRoles")
+                        .HasForeignKey("RoleID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.EmployeeSkill", b =>
+                {
+                    b.HasOne("TeamInsights.Models.Person", "Employee")
+                        .WithMany("EmployeeSkills")
+                        .HasForeignKey("EmployeeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TeamInsights.Models.Skill", "Skill")
+                        .WithMany("EmployeeSkills")
+                        .HasForeignKey("SkillID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Skill");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Performance", b =>
+                {
+                    b.HasOne("TeamInsights.Models.Contribution", "Contribution")
+                        .WithMany("Performances")
+                        .HasForeignKey("ContributionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TeamInsights.Models.EmployeeRole", "EmployeeRole")
+                        .WithMany("Performances")
+                        .HasForeignKey("EmployeeRoleID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TeamInsights.Models.Evaluation", "Evaluation")
+                        .WithMany("Performances")
+                        .HasForeignKey("EvaluationID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TeamInsights.Models.Person", "Manager")
+                        .WithMany("Performances")
+                        .HasForeignKey("ManagerID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("TeamInsights.Models.Project", "Project")
+                        .WithMany("Performances")
+                        .HasForeignKey("ProjectID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contribution");
+
+                    b.Navigation("EmployeeRole");
+
+                    b.Navigation("Evaluation");
+
+                    b.Navigation("Manager");
+
+                    b.Navigation("Project");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Person", b =>
+                {
+                    b.HasOne("TeamInsights.Models.Person", "Manager")
+                        .WithMany("Employees")
+                        .HasForeignKey("ManagerID");
+
+                    b.Navigation("Manager");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Certification", b =>
+                {
+                    b.Navigation("EmployeeCertifications");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Contribution", b =>
+                {
+                    b.Navigation("Performances");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.EmployeeRole", b =>
+                {
+                    b.Navigation("Performances");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Evaluation", b =>
+                {
+                    b.Navigation("Performances");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Person", b =>
+                {
+                    b.Navigation("EmployeeCertifications");
+
+                    b.Navigation("EmployeeRoles");
+
+                    b.Navigation("EmployeeSkills");
+
+                    b.Navigation("Employees");
+
+                    b.Navigation("Performances");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Project", b =>
+                {
+                    b.Navigation("Performances");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Role", b =>
+                {
+                    b.Navigation("EmployeeRoles");
+                });
+
+            modelBuilder.Entity("TeamInsights.Models.Skill", b =>
+                {
+                    b.Navigation("EmployeeSkills");
                 });
 #pragma warning restore 612, 618
         }
