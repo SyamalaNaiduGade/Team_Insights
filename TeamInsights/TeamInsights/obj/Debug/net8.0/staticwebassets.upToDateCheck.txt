@@ -1,7 +1,12 @@
 wwwroot\css\site.css
+wwwroot\css\splashsite.css
 wwwroot\favicon.ico
 wwwroot\Images\background.webp
 wwwroot\Images\bglogin.webp
+wwwroot\Images\connections.mp4
+wwwroot\Images\connections2.mp4
+wwwroot\Images\logo.mp4
+wwwroot\Images\uifaces-popular-image.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

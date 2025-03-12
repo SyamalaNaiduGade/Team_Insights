@@ -8,16 +8,16 @@ namespace TeamInsights.Models
         [Key]
         public int EvaluationID { get; set; }
 
-        public int Score { get; set; }
+        public int? Score { get; set; }
 
         [StringLength(500)]
-        public string Comments { get; set; }
+        public string? Comments { get; set; }
 
         [DataType(DataType.Date)]
         [Display(Name ="Evaluation Date")]
-        public DateTime EvaluationDate { get; set; }
+        public DateTime? EvaluationDate { get; set; }
 
         // Navigation properties
-        public virtual ICollection<Performance> Performances { get; set; }
+        public virtual ICollection<Performance>? Performances { get; set; }
     }
 }

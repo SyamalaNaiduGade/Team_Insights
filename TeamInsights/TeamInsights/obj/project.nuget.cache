@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iZi27XCxzSDnqJQtVP0OaPu7l+7Nat3r4bEs793xHPtqIOr1Jnb+VBE8nfh8UVuBmiDsMPQgpTcBvnVqMsvUQg==",
+  "dgSpecHash": "8GvLs/9ww/OPbVdzEv+AxPRX2GFmJOy8XVye8xA4ur3TSmKeAriw0QAvoYh+05LnJUMwk5LL3VgRQYIQqpHMWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\syama\\OneDrive\\Desktop\\Team_Insights_sprint_2_MVP\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
+  "projectFilePath": "C:\\Users\\syama\\OneDrive\\Desktop\\Team insights sprint-2\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\syama\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\syama\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

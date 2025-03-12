@@ -9,10 +9,10 @@ namespace TeamInsights.Models
 
         [Required]
         [StringLength(100)]
-        public string RoleName { get; set; }
+        public string? RoleName { get; set; }
 
         // Navigation properties
-        public virtual ICollection<EmployeeRole> EmployeeRoles { get; set; }
+        public virtual ICollection<EmployeeRole>? EmployeeRoles { get; set; }
 
     }
 }
