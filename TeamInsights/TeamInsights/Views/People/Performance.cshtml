@@ -1,0 +1,185 @@
+﻿@model TeamInsights.ViewModels.PerformanceReportViewModel
+
+@{
+    ViewData["Title"] = "Employee Performance Report";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Performance Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- Google Charts Loader -->
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .overall-analysis {
+            margin-top: 20px;
+        }
+        #projectsChart, #hoursChart {
+            width: 100%;
+            height: 300px; /* Adjust as needed */
+        }
+    </style>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+
+        function drawCharts() {
+            drawProjectsChart();
+            drawHoursChart();
+        }
+
+         function drawProjectsChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Project', 'Contributions'],
+                @foreach (var performance in Model.Performances ?? new List<TeamInsights.Models.Performance>())
+                {
+                    @:['@performance.Project?.ProjectName', 1],
+                    
+                }
+            ]);
+
+            var options = {
+                title: 'Project Contributions',
+                is3D: true, // Optional
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('projectsChart'));
+            chart.draw(data, options);
+        }
+
+        function drawHoursChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Project', 'Hours Worked'],
+                @foreach (var performance in Model.Performances ?? new List<TeamInsights.Models.Performance>())
+                {
+                    @:['@performance.Project?.ProjectName', @performance.HoursWorked]
+                }
+            ]);
+
+            var options = {
+                title: 'Hours Worked per Project',
+                hAxis: {title: 'Project', titleTextStyle: {color: 'black'}},
+                vAxis: {title: 'Hours', titleTextStyle: {color: 'black'}}
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('hoursChart'));
+            chart.draw(data, options);
+        }
+
+        google.charts.setOnLoadCallback(drawCharts); //Draw graph when loaded
+    </script>
+</head>
+<body>
+
+@*     <h1>Employee Performance Report</h1>
+ *@
+    <section>
+        <h2>Employee Performance Report</h2>
+        <p><strong>Employee Name:</strong> @Model.Employee?.FirstName @Model.Employee?.LastName</p>
+        <p><strong>Hire Date:</strong> @Model.Employee?.HireDate.ToString("MM/dd/yyyy")</p>
+
+        <!-- Year Selection Filter -->
+         <form method="get" asp-controller="PerformanceReport" asp-action="Performance" asp-route-personId="@Model.Employee.PersonID">
+            <label for="year">Filter by Year:</label>
+            <select id="year" name="year" class="form-control" onchange="this.form.submit()">
+                @if (ViewBag.SelectedYear == null)
+                {
+                    <option value="" selected>All Years</option>
+                }
+                else
+                {
+                    <option value="">All Years</option>
+                }
+
+                @foreach (var year in ViewBag.Years as List<int>)
+                {
+                    if (year == ViewBag.SelectedYear)
+                    {
+                        <option value="@year" selected>@year</option>
+                    }
+                    else
+                    {
+                        <option value="@year">@year</option>
+                    }
+                }
+            </select>
+        </form>
+    </section>
+
+    <section>
+        <h3>Performance Summary</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Contribution Date</th>
+                    <th>Hours Worked</th>
+                    <th>Manager Evaluation Score</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Performances != null && Model.Performances.Any())
+                {
+                    @foreach (var performance in Model.Performances)
+                    {
+                        <tr>
+                            <td>@performance.Project?.ProjectName</td>
+                            <td>@performance.Contribution?.ContributionDate?.ToString("MM/dd/yyyy")</td>
+                            <td>@performance.HoursWorked</td>
+                            <td>@performance.Evaluation?.Score</td>
+                            <td>@performance.Evaluation?.Comments</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5">No performance data available for the selected year.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+     <section class="overall-analysis">
+        <h3>Performance Charts</h3>
+        <div id="projectsChart"></div>
+        <div id="hoursChart"></div>
+    </section>
+
+    <section class="overall-analysis">
+        <h3>Overall Performance Analysis</h3>
+        <ul>
+            <li><strong>Total Projects Contributed:</strong> @Model.Performances?.Count()</li>
+            <li><strong>Total Hours Worked:</strong> @Model.Performances?.Sum(p => p.HoursWorked)</li>
+            <li><strong>Average Manager Evaluation Score:</strong> @(Model.Performances?.Average(p => p.Evaluation?.Score) ?? 0)</li>
+            <li><strong>Key Strengths:</strong> </li>
+            <li><strong>Areas for Improvement:</strong></li>
+        </ul>
+    </section>
+     <div class="d-flex justify-content-between align-items-center mb-3">
+        <p>
+            <a asp-action="Index" class="btn from-right">Back</a>
+        </p>
+    </div>
+
+</body>
+</html>

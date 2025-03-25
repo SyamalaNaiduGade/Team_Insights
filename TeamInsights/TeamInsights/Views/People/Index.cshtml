@@ -42,13 +42,13 @@
     <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
         <h1>People</h1>
         @* <div class="tabs">
-            <a href="#" class="tab-link">Account</a>
-            <a href="#" class="tab-link active">Appearance</a>
-            <a href="#" class="tab-link">Profile</a>
-            <a href="#" class="tab-link">Security</a>
-            <a href="#" class="tab-link">Notifications</a>
-            <a href="#" class="tab-link">Billing</a>
-            <a href="#" class="tab-link">Integrations</a>
+        <a href="#" class="tab-link">Account</a>
+        <a href="#" class="tab-link active">Appearance</a>
+        <a href="#" class="tab-link">Profile</a>
+        <a href="#" class="tab-link">Security</a>
+        <a href="#" class="tab-link">Notifications</a>
+        <a href="#" class="tab-link">Billing</a>
+        <a href="#" class="tab-link">Integrations</a>
         </div> *@
         <div>
             <table class="table">
@@ -90,6 +90,7 @@
                         <th>
                             @Html.DisplayNameFor(model => model.Manager)
                         </th>
+                        <th>Performance</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -134,6 +135,9 @@
                                 @Html.DisplayFor(modelItem => item.Manager.FirstName)
                             </td>
                             <td>
+                                <a asp-controller="People" asp-action="Performance" asp-route-personId="@item.PersonID" class="btn from-right">Generate Report</a>
+                            </td>
+                            <td>
                                 <a asp-action="Edit" asp-route-id="@item.PersonID">Edit</a> |
                                 <a asp-action="Details" asp-route-id="@item.PersonID">Details</a> |
                                 <a asp-action="Delete" asp-route-id="@item.PersonID">Delete</a>
@@ -144,6 +148,8 @@
             </table>
             <p>
                 <a asp-controller="People" asp-action="Create" class="btn from-right">Create New</a>
+                <a asp-controller="EmployeeRoles" asp-action="Index" class="btn from-right">Employee Role </a>
+
             </p>
         </div>
     </main>
