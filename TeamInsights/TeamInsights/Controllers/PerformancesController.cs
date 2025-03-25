@@ -52,9 +52,9 @@ namespace TeamInsights.Controllers
         // GET: Performances/Create
         public IActionResult Create()
         {
-            ViewData["ContributionID"] = new SelectList(_context.Contributions, "ContributionID", "ContributionID");
+            ViewData["ContributionID"] = new SelectList(_context.Contributions, "ContributionID", "Description");
             ViewData["EmployeeRoleID"] = new SelectList(_context.EmployeeRoles, "EmployeeRoleID", "EmployeeRoleID");
-            ViewData["EvaluationID"] = new SelectList(_context.Evaluations, "EvaluationID", "EvaluationID");
+            ViewData["EvaluationID"] = new SelectList(_context.Evaluations, "EvaluationID", "Comments");
             ViewData["ManagerID"] = new SelectList(_context.People, "PersonID", "FirstName");
             ViewData["ProjectID"] = new SelectList(_context.Projects, "ProjectID", "ProjectName");
             return View();
@@ -73,9 +73,9 @@ namespace TeamInsights.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ContributionID"] = new SelectList(_context.Contributions, "ContributionID", "ContributionID", performance.ContributionID);
+            ViewData["ContributionID"] = new SelectList(_context.Contributions, "ContributionID", "Description", performance.ContributionID);
             ViewData["EmployeeRoleID"] = new SelectList(_context.EmployeeRoles, "EmployeeRoleID", "EmployeeRoleID", performance.EmployeeRoleID);
-            ViewData["EvaluationID"] = new SelectList(_context.Evaluations, "EvaluationID", "EvaluationID", performance.EvaluationID);
+            ViewData["EvaluationID"] = new SelectList(_context.Evaluations, "EvaluationID", "Comments", performance.EvaluationID);
             ViewData["ManagerID"] = new SelectList(_context.People, "PersonID", "FirstName", performance.ManagerID);
             ViewData["ProjectID"] = new SelectList(_context.Projects, "ProjectID", "ProjectName", performance.ProjectID);
             return View(performance);
@@ -94,9 +94,9 @@ namespace TeamInsights.Controllers
             {
                 return NotFound();
             }
-            ViewData["ContributionID"] = new SelectList(_context.Contributions, "ContributionID", "ContributionID", performance.ContributionID);
+            ViewData["ContributionID"] = new SelectList(_context.Contributions, "ContributionID", "Description", performance.ContributionID);
             ViewData["EmployeeRoleID"] = new SelectList(_context.EmployeeRoles, "EmployeeRoleID", "EmployeeRoleID", performance.EmployeeRoleID);
-            ViewData["EvaluationID"] = new SelectList(_context.Evaluations, "EvaluationID", "EvaluationID", performance.EvaluationID);
+            ViewData["EvaluationID"] = new SelectList(_context.Evaluations, "EvaluationID", "Comments", performance.EvaluationID);
             ViewData["ManagerID"] = new SelectList(_context.People, "PersonID", "FirstName", performance.ManagerID);
             ViewData["ProjectID"] = new SelectList(_context.Projects, "ProjectID", "ProjectName", performance.ProjectID);
             return View(performance);

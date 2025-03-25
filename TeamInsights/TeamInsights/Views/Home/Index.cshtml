@@ -1,4 +1,6 @@
-﻿@{
+﻿@* @model TeamInsights.ViewModels.PerformanceReportViewModel (You would use this line if you pass the performance view Model)*@
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -60,8 +62,6 @@
                 </div>
             </section>
 
-
-
             <!-- Quick Project Summary Cards -->
             <section class="mb-10">
                 <h2 class="text-2xl font-bold mb-4">Quick Project Summary Cards</h2>
@@ -71,12 +71,6 @@
                         <p><strong>Start:</strong> Jan 2024 – <strong>End:</strong> June 2024</p>
                         <p><strong>Manager:</strong> Alice Johnson</p>
                         <p><strong>Team:</strong> 👥 6 Employees</p>
-                        @* <p>
-                            <strong>Key Skills:</strong>
-                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-1">Python</span>
-                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1">Data Analysis</span>
-                            <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">UI Design</span>
-                        </p> *@
                         <div class="mt-2">
                             <div class="bg-gray-200 rounded-full h-3 w-full">
                                 <div class="bg-blue-500 h-3 rounded-full w-4/5"></div>
@@ -89,12 +83,6 @@
                         <p><strong>Start:</strong> March 2024 – <strong>End:</strong> Aug 2024</p>
                         <p><strong>Manager:</strong> Brian Carter</p>
                         <p><strong>Team:</strong> 👥 5 Employees</p>
-                        @* <p>
-                            <strong>Key Skills:</strong>
-                            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full mr-1">Agile Review</span>
-                            <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full mr-1">Reporting</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">Presentation</span>
-                        </p> *@
                         <div class="mt-2">
                             <div class="bg-gray-200 rounded-full h-3 w-full">
                                 <div class="bg-green-500 h-3 rounded-full w-2/5"></div>
@@ -104,42 +92,6 @@
                     </div>
                 </div>
             </section>
-
-
-            @* <!-- Department Heatmap Matrix -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">Department Heatmap</h2>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full text-sm text-left border border-gray-300">
-                        <thead class="bg-gray-200">
-                            <tr>
-                                <th class="px-4 py-2">City</th>
-                                <th class="px-4 py-2">Python</th>
-                                <th class="px-4 py-2">Excel</th>
-                                <th class="px-4 py-2">QA</th>
-                                <th class="px-4 py-2">UI Design</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="bg-white">
-                                <td class="px-4 py-2 font-semibold">Chicago</td>
-                                <td class="px-4 py-2 bg-red-500 text-white text-center">High</td>
-                                <td class="px-4 py-2 bg-yellow-300 text-center">Medium</td>
-                                <td class="px-4 py-2 bg-yellow-500 text-white text-center">Medium</td>
-                                <td class="px-4 py-2 bg-red-400 text-white text-center">High</td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="px-4 py-2 font-semibold">Austin</td>
-                                <td class="px-4 py-2 bg-red-300 text-white text-center">Medium</td>
-                                <td class="px-4 py-2 bg-yellow-300 text-center">Medium</td>
-                                <td class="px-4 py-2 bg-yellow-400 text-white text-center">Low</td>
-                                <td class="px-4 py-2 bg-yellow-300 text-center">Medium</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section> *@
-
 
             <!-- Project Completion Trends Chart Placeholder -->
             <section class="mb-10">
@@ -161,18 +113,6 @@
                             <li>David Chen – 9 Project Contributions</li>
                         </ul>
                     </div>
-                    @* <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">Top Collaboration Tools</h3>
-                        <ul class="list-disc list-inside text-gray-700">
-                            <li>Slack</li>
-                            <li>Jira</li>
-                            <li>Microsoft Teams</li>
-                        </ul>
-                    </div> *@
-                    @* <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">Avg. Meetings per Week</h3>
-                        <p class="text-gray-700">5 Meetings</p>
-                    </div> *@
                 </div>
             </section>
 
@@ -180,54 +120,135 @@
             <script>
                 const ctx = document.getElementById('completionChart').getContext('2d');
                 const completionChart = new Chart(ctx, {
-                  type: 'line',
-                  data: {
-                    labels: ['2022', '2023', '2024'],
-                    datasets: [{
-                      label: 'Performance Score %',
-                      data: [45, 60, 70, 75, 82, 90],
-                      borderColor: '#3B82F6',
-                      backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                      tension: 0.4,
-                      fill: true,
-                      pointBackgroundColor: '#3B82F6',
-                      pointRadius: 5
-                    }]
-                  },
-                  options: {
-                    responsive: true,
-                    plugins: {
-                      legend: {
-                        display: true,
-                        position: 'top'
-                      },
-                      tooltip: {
-                        enabled: true
-                      }
+                    type: 'line',
+                    data: {
+                        labels: ['2022', '2023', '2024'],
+                        datasets: [{
+                            label: 'Performance Score %',
+                            data: [45, 60, 70, 75, 82, 90],
+                            borderColor: '#3B82F6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                            tension: 0.4,
+                            fill: true,
+                            pointBackgroundColor: '#3B82F6',
+                            pointRadius: 5
+                        }]
                     },
-                    scales: {
-                      y: {
-                        beginAtZero: true,
-                        max: 100,
-                        title: {
-                          display: true,
-                          text: 'Manager Evaluation Score %'
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top'
+                            },
+                            tooltip: {
+                                enabled: true
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: {
+                                    display: true,
+                                    text: 'Manager Evaluation Score %'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Year'
+                                }
+                            }
                         }
-                      },
-                      x: {
-                        title: {
-                          display: true,
-                          text: 'Year'
-                        }
-                      }
                     }
-                  }
                 });
             </script>
         </div>
-        
+    </main>
 
+    <!-- Chatbot Container (at the end of the main content) -->
+    <div class="chatbot-container fixed bottom-5 right-5 z-50">
+        <button id="chatbot-toggle" class="chatbot-toggle bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-md">
+            <img src="message-icon.png" alt="Chatbot" width="30" class="align-middle">  <!-- Replace with your icon -->
+        </button>
 
-        </main>
+        <div id="chatbot-window" class="chatbot-window hidden absolute bottom-20 right-0 w-96 bg-white border border-gray-300 rounded-lg shadow-lg">
+            <div class="chatbot-header bg-blue-500 text-white p-3 rounded-t-lg flex items-center justify-between">
+                <span class="chatbot-title text-lg font-semibold">Team Insights Bot</span>
+                <button id="chatbot-close" class="chatbot-close text-xl font-bold">×</button>
+            </div>
+            <div id="chatbot-messages" class="chatbot-messages p-4 h-64 overflow-y-auto">
+                <!-- Chat messages will be displayed here -->
+            </div>
+            <div class="chatbot-input-area p-3 border-t border-gray-300 flex">
+                <input type="text" id="chatbot-input" class="chatbot-input flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your question...">
+                <button id="chatbot-send" class="chatbot-send bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md ml-2">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chatbot JavaScript Logic
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotSend = document.getElementById('chatbot-send');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+
+        // Sample questions and answers
+        const faq = {
+            "What is Team Insights?": "Team Insights is a project to create and manage...",
+            "What is Team Insights": "Team Insights is a project to create and manage...",
+            "Hello": "Hello, How can i Help you today?",
+            "Hi": "Hi, How can i Help you today?",
+            "": "",
+            "How do I create a project?": "To create a project, go to...",
+            "What roles are available?": "We have roles such as developer...",
+            // Add more questions and answers here
+        };
+
+        // Function to add a message to the chat
+        function addMessage(message, isUser) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add(isUser ? 'user-message' : 'bot-message', 'mb-2');
+            messageElement.textContent = message;
+            chatbotMessages.appendChild(messageElement);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to the bottom
+        }
+
+        // Function to handle sending a message
+        function sendMessage() {
+            const message = chatbotInput.value.trim();
+            if (message) {
+                addMessage(message, true); // Add user message
+
+                // Find the answer
+                const answer = faq[message] || "Sorry, I don't have an answer to that question.";
+                setTimeout(() => {
+                    addMessage(answer, false); // Add bot answer after a short delay
+                }, 500);
+
+                chatbotInput.value = ''; // Clear the input
+            }
+        }
+
+        // Event listeners
+        chatbotToggle.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('hidden');
+        });
+
+        chatbotClose.addEventListener('click', () => {
+            chatbotWindow.classList.add('hidden');
+        });
+
+        chatbotSend.addEventListener('click', sendMessage);
+
+        chatbotInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
 </div>
-

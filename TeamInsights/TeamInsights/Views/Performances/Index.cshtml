@@ -43,18 +43,21 @@
     <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
         <h1>Performance</h1>
         @* <div class="tabs">
-            <a href="#" class="tab-link">Account</a>
-            <a href="#" class="tab-link active">Appearance</a>
-            <a href="#" class="tab-link">Profile</a>
-            <a href="#" class="tab-link">Security</a>
-            <a href="#" class="tab-link">Notifications</a>
-            <a href="#" class="tab-link">Billing</a>
-            <a href="#" class="tab-link">Integrations</a>
+        <a href="#" class="tab-link">Account</a>
+        <a href="#" class="tab-link active">Appearance</a>
+        <a href="#" class="tab-link">Profile</a>
+        <a href="#" class="tab-link">Security</a>
+        <a href="#" class="tab-link">Notifications</a>
+        <a href="#" class="tab-link">Billing</a>
+        <a href="#" class="tab-link">Integrations</a>
         </div> *@
         <div>
             <table class="table">
                 <thead>
                     <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.EmployeeRole.Employee.FirstName)
+                        </th>
                         <th>
                             @Html.DisplayNameFor(model => model.Manager)
                         </th>
@@ -84,19 +87,22 @@
                     {
                         <tr>
                             <td>
+                                @Html.DisplayFor(modelItem => item.EmployeeRole.Employee.FirstName)
+                            </td>
+                            <td>
                                 @Html.DisplayFor(modelItem => item.Manager.FirstName)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.EmployeeRole.EmployeeRoleID)
+                                @Html.DisplayFor(modelItem => item.EmployeeRole.Role.RoleName)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Project.ProjectName)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Contribution.ContributionID)
+                                @Html.DisplayFor(modelItem => item.Contribution.Description)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Evaluation.EvaluationID)
+                                @Html.DisplayFor(modelItem => item.Evaluation.Comments)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.HoursWorked)

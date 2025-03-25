@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TeamInsights.DAL;
 using TeamInsights.Models;
+using TeamInsights.ViewModels;
 
 namespace TeamInsights.Controllers
 {
@@ -154,6 +155,53 @@ namespace TeamInsights.Controllers
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Performance(int personId, int? year)
+        {
+            // Get the employee details
+            var employee = await _context.People.FindAsync(personId);
+
+            if (employee == null)
+            {
+                return NotFound("Employee not found.");
+            }
+
+            // Fetch all performances for the employee
+            IQueryable<Performance> performancesQuery = _context.Performances
+                .Include(p => p.Project)
+                .Include(p => p.Contribution)
+                .Include(p => p.Evaluation)
+                .Where(p => p.EmployeeRole.EmployeeID == personId);
+
+            // Filter by year if provided
+            if (year.HasValue)
+            {
+                performancesQuery = performancesQuery.Where(p => p.Year.Value.Year == year.Value);
+            }
+
+            var performances = await performancesQuery.ToListAsync();
+
+            // Get distinct years for filtering
+            var years = await _context.Performances
+                .Where(p => p.EmployeeRole.EmployeeID == personId)
+                .Select(p => p.Year.Value.Year)
+                .Distinct()
+                .OrderBy(y => y)
+                .ToListAsync();
+
+            // Pass the report data to the View
+            var viewModel = new PerformanceReportViewModel
+            {
+                Employee = employee,
+                Performances = performances,
+                Year = year ?? DateTime.Now.Year // Use current year if year is null
+            };
+
+            ViewBag.Years = years;
+            ViewBag.SelectedYear = year;
+
+            return View(viewModel);
         }
 
         private bool PersonExists(int id)
