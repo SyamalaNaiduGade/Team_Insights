@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TeamInsights.Models.Role>
+﻿@model List<TeamInsights.Models.Person>
 
 @{
     ViewData["Title"] = "Index";
@@ -14,18 +14,19 @@
         <nav>
             <ul class="nav flex-column">
                 <li><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
-                <li><a asp-controller="People" asp-action="Index" class="nav-link">People</a></li>
+                <li><a asp-controller="People" asp-action="Index" class="nav-link active">People</a></li>
                 <li><a asp-controller="Projects" asp-action="Index" class="nav-link">Projects</a></li>
-                <li><a asp-controller="Roles" asp-action="Index" class="nav-link active">Roles</a></li>
-                <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li>
+@*                 <li><a asp-controller="Roles" asp-action="Index" class="nav-link">Roles</a></li>
+                <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li> *@
                 <li><a asp-controller="Evaluations" asp-action="Index" class="nav-link">Evaluations</a></li>
                 <li><a asp-controller="Performances" asp-action="Index" class="nav-link">Performance Metrics</a></li>
             </ul>
         </nav>
         <div class="user-profile mt-auto">
             <button class="profile-btn d-flex align-items-center border p-2 rounded-3 shadow-sm w-100">
-                <img src="images/uifaces-popular-image.jpg" alt="User Avatar" class="avatar rounded-circle me-3" style="width: 40px; height: 40px;">
+                <img src="~/images/uifaces-popular-image.jpg" alt="User Avatar" class="avatar rounded-circle me-3" style="width: 40px; height: 40px;">
                 <div class="profile-btn-text">
+                    
                     <p class="m-0"><strong>Admin@* @User.Identity?.Name *@</strong></p>
                     <span class="small">teaminsightsadmin@mail.com</span>
                 </div>
@@ -33,43 +34,49 @@
             <div class="dropdown-menu mt-2">
                 <a href="#" class="dropdown-item">Profile</a>
                 <a href="#" class="dropdown-item">Settings</a>
-                <a href="#" class="dropdown-item">Logout</a>
+                <a asp-controller="Splash" asp-action="Index" class="dropdown-item">Logout</a>
             </div>
         </div>
     </aside>
+
     <!-- Main Content -->
     <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
-        <h1>Roles</h1>
-
+        <h1>Employees List</h1>
         <div>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.RoleName)
-                        </th>
-                        <th></th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Hire Date</th>
+                        <th>Experience (Years)</th>
+                        <th>Manager</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model)
+                    @foreach (var employee in Model)
                     {
                         <tr>
+                            <td>@employee.FirstName</td>
+                            <td>@employee.LastName</td>
+                            <td>@employee.Email</td>
+                            <td>@employee.HireDate.ToString("dd-MM-yyyy")</td>
+                            <td>@employee.Experience</td>
+                            <td>@(employee.Manager != null ? employee.Manager.FirstName + " " + employee.Manager.LastName : "-")</td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.RoleName)
-                            </td>
-                            <td>
-                                <a asp-action="Edit" asp-route-id="@item.RoleID">Edit</a> |
-                                <a asp-action="Details" asp-route-id="@item.RoleID">Details</a> |
-                                <a asp-action="Delete" asp-route-id="@item.RoleID">Delete</a>
+                                <a href="@Url.Action("Edit", "People", new { id = employee.PersonID })">Edit</a> |
+                                <a href="@Url.Action("Details", "People", new { id = employee.PersonID })">Details</a> |
+                                <a href="@Url.Action("Delete", "People", new { id = employee.PersonID })" onclick="return confirm('Are you sure?')">Delete</a> |
+                                <a href="@Url.Action("Index", "Performances")">View Performance</a>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
-
             <p>
-                <a asp-action="Create" class="btn from-right">Create New</a>
+                <a href="@Url.Action("Index", "Home")" class="btn from-right">Back to Dashboard</a>
             </p>
         </div>
     </main>

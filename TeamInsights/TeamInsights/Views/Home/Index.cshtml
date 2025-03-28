@@ -6,7 +6,7 @@
     <!-- Sidebar -->
     <aside class="sidebar d-flex flex-column p-3 me-4" style="width: 250px">
         @* <h2 class="logo text-center">Team Insights Management System</h2> *@
-        <video id="logo-video" autoplay playsinline muted>
+        <video id="logo-video" autoplay playsinline muted style="border:0">
             <source src="~/Images/logo.mp4" type="video/mp4">
         </video>
         <nav>
@@ -14,8 +14,8 @@
                 <li><a asp-controller="Home" asp-action="Index" class="nav-link active">Home</a></li>
                 <li><a asp-controller="People" asp-action="Index" class="nav-link">People</a></li>
                 <li><a asp-controller="Projects" asp-action="Index" class="nav-link">Projects</a></li>
-                <li><a asp-controller="Roles" asp-action="Index" class="nav-link">Roles</a></li>
-                <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li>
+                @* <li><a asp-controller="Roles" asp-action="Index" class="nav-link">Roles</a></li>
+                <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li> *@
                 <li><a asp-controller="Evaluations" asp-action="Index" class="nav-link">Evaluations</a></li>
                 <li><a asp-controller="Performances" asp-action="Index" class="nav-link">Performance Metrics</a></li>
             </ul>
@@ -23,8 +23,8 @@
         <div class="user-profile mt-auto">
             <button class="profile-btn d-flex align-items-center border p-2 rounded-3 shadow-sm w-100">
                 <img src="images/uifaces-popular-image.jpg" alt="User Avatar" class="avatar rounded-circle me-3" style="width: 40px; height: 40px;">
-                <div>
-                    <p class="m-0"><strong>Team Insights Admin</strong></p>
+                <div class="profile-btn-text">
+                    <p class="m-0"><strong>Admin@* @User.Identity?.Name *@</strong></p>
                     <span class="small">teaminsightsadmin@mail.com</span>
 
                 </div>
@@ -32,198 +32,153 @@
             <div class="dropdown-menu mt-2">
                 <a href="#" class="dropdown-item">Profile</a>
                 <a href="#" class="dropdown-item">Settings</a>
-                <a asp-controller="Splash" asp-action="Index" class="dropdown-item">Logout</a>
+                <a asp-area="Identity" asp-page="/Account/Logout" class="dropdown-item">Logout</a>
             </div>
         </div>
     </aside>
 
     <!-- Main Content -->
     <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
-        <h1 class="home-header mb-10" style="font-size: 42px; font-weight: 500;">Home</h1>
-        <div class="tailwind-section">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-
-            <!-- Manager & Leadership Insights -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">Manager & Leadership Insights</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">👩‍💼 Alice Johnson</h3>
-                        <p><strong>Position:</strong> Senior Project Manager</p>
-                        <p><strong>Projects Led:</strong> 3</p>
-                        <p><strong>Team Size:</strong> 6 Employees</p>
-                        <p><strong>Experience:</strong> 10+ years</p>
-                        <blockquote class="italic text-gray-600 border-l-4 border-blue-300 pl-3 mt-2">
-                            "I believe in data-driven leadership."
-                        </blockquote>
-                    </div>
-                </div>
-            </section>
-
-
-
-            <!-- Quick Project Summary Cards -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">Quick Project Summary Cards</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">🧠 Predictive Planning</h3>
-                        <p><strong>Start:</strong> Jan 2024 – <strong>End:</strong> June 2024</p>
-                        <p><strong>Manager:</strong> Alice Johnson</p>
-                        <p><strong>Team:</strong> 👥 6 Employees</p>
-                        @* <p>
-                            <strong>Key Skills:</strong>
-                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-1">Python</span>
-                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1">Data Analysis</span>
-                            <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">UI Design</span>
-                        </p> *@
-                        <div class="mt-2">
-                            <div class="bg-gray-200 rounded-full h-3 w-full">
-                                <div class="bg-blue-500 h-3 rounded-full w-4/5"></div>
-                            </div>
-                            <p class="text-sm mt-1 text-gray-600">Progress: 80%</p>
+        <h1 class="home-header mb-10">Home</h1>
+        <div class="home-cards">
+            <section class="mb-4">
+                <h2 class="h4 fw-bold mb-3">Manager & Leadership Insights</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="bg-white shadow-sm rounded-3 p-4">
+                            <h3 class="h5 fw-semibold mb-1">Managers</h3>
+                            <p><strong>Total: @ViewBag.ManagerCount</strong></p>
+                            <a href="@Url.Action("Managers", "Home")" class="btn from-right mt-3">View Managers</a>
                         </div>
                     </div>
-                    <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">🔍 Project Retrospective</h3>
-                        <p><strong>Start:</strong> March 2024 – <strong>End:</strong> Aug 2024</p>
-                        <p><strong>Manager:</strong> Brian Carter</p>
-                        <p><strong>Team:</strong> 👥 5 Employees</p>
-                        @* <p>
-                            <strong>Key Skills:</strong>
-                            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full mr-1">Agile Review</span>
-                            <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full mr-1">Reporting</span>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">Presentation</span>
-                        </p> *@
-                        <div class="mt-2">
-                            <div class="bg-gray-200 rounded-full h-3 w-full">
-                                <div class="bg-green-500 h-3 rounded-full w-2/5"></div>
-                            </div>
-                            <p class="text-sm mt-1 text-gray-600">Progress: 40%</p>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="bg-white shadow-sm rounded-3 p-4">
+                            <h3 class="h5 fw-semibold mb-1">Employees</h3>
+                            <p><strong>Total: @ViewBag.EmployeeCount</strong></p>
+                            <a href="@Url.Action("Employees", "Home")" class="btn from-right mt-3">View Employees</a>
                         </div>
                     </div>
                 </div>
             </section>
 
 
-            @* <!-- Department Heatmap Matrix -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">Department Heatmap</h2>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full text-sm text-left border border-gray-300">
-                        <thead class="bg-gray-200">
-                            <tr>
-                                <th class="px-4 py-2">City</th>
-                                <th class="px-4 py-2">Python</th>
-                                <th class="px-4 py-2">Excel</th>
-                                <th class="px-4 py-2">QA</th>
-                                <th class="px-4 py-2">UI Design</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="bg-white">
-                                <td class="px-4 py-2 font-semibold">Chicago</td>
-                                <td class="px-4 py-2 bg-red-500 text-white text-center">High</td>
-                                <td class="px-4 py-2 bg-yellow-300 text-center">Medium</td>
-                                <td class="px-4 py-2 bg-yellow-500 text-white text-center">Medium</td>
-                                <td class="px-4 py-2 bg-red-400 text-white text-center">High</td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="px-4 py-2 font-semibold">Austin</td>
-                                <td class="px-4 py-2 bg-red-300 text-white text-center">Medium</td>
-                                <td class="px-4 py-2 bg-yellow-300 text-center">Medium</td>
-                                <td class="px-4 py-2 bg-yellow-400 text-white text-center">Low</td>
-                                <td class="px-4 py-2 bg-yellow-300 text-center">Medium</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section> *@
 
 
-            <!-- Project Completion Trends Chart Placeholder -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">📈 Project Performance Trend Over Time</h2>
-                <div class="bg-white rounded-2xl p-6 shadow-md text-gray-600 text-sm">
-                    <canvas id="completionChart" class="w-full h-64"></canvas>
-                </div>
-            </section>
-
-            <!-- Team Collaboration Insights -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">🤝 Team Collaboration Insights</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">Most Active Collaborators</h3>
-                        <ul class="list-disc list-inside text-gray-700">
-                            <li>Michael Lee – 12 Project Contributions</li>
-                            <li>Sarah Patel – 10 Project Contributions</li>
-                            <li>David Chen – 9 Project Contributions</li>
-                        </ul>
+  @*                      <!-- Quick Project Summary Cards -->
+<section class="mb-4">
+    <h2 class="h4 fw-bold mb-3">Quick Project Summary Cards</h2>
+    <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="bg-white shadow-sm rounded-3 p-4">
+                <h3 class="h5 fw-semibold mb-1">🧠 Predictive Planning</h3>
+                <p><strong>Start:</strong> Jan 2024 – <strong>End:</strong> June 2024</p>
+                <p><strong>Manager:</strong> Alice Johnson</p>
+                <p><strong>Team:</strong> 👥 6 Employees</p>
+                <div class="mt-2">
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-primary" style="width: 80%;"></div>
                     </div>
-                    @* <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">Top Collaboration Tools</h3>
-                        <ul class="list-disc list-inside text-gray-700">
-                            <li>Slack</li>
-                            <li>Jira</li>
-                            <li>Microsoft Teams</li>
-                        </ul>
-                    </div> *@
-                    @* <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">Avg. Meetings per Week</h3>
-                        <p class="text-gray-700">5 Meetings</p>
-                    </div> *@
+                    <p class="small text-muted mt-1">Progress: 80%</p>
                 </div>
-            </section>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="bg-white shadow-sm rounded-3 p-4">
+                <h3 class="h5 fw-semibold mb-1">🔍 Project Retrospective</h3>
+                <p><strong>Start:</strong> March 2024 – <strong>End:</strong> Aug 2024</p>
+                <p><strong>Manager:</strong> Brian Carter</p>
+                <p><strong>Team:</strong> 👥 5 Employees</p>
+                <div class="mt-2">
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-success" style="width: 40%;"></div>
+                    </div>
+                    <p class="small text-muted mt-1">Progress: 40%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Completion Trends Chart Placeholder -->
+<section class="mb-4">
+    <h2 class="h4 fw-bold mb-3">📈 Project Performance Trend Over Time</h2>
+    <div class="bg-white rounded-3 p-4 shadow-sm text-muted small">
+        <canvas id="completionChart" class="w-100" style="height: 250px;"></canvas>
+    </div>
+</section>
+
+<!-- Team Collaboration Insights -->
+<section class="mb-4">
+    <h2 class="h4 fw-bold mb-3">🤝 Team Collaboration Insights</h2>
+    <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="bg-white shadow-sm rounded-3 p-4">
+                <h3 class="h5 fw-semibold mb-1">Most Active Collaborators</h3>
+                <ul class="list-unstyled text-muted">
+                    <li>Michael Lee – 12 Project Contributions</li>
+                    <li>Sarah Patel – 10 Project Contributions</li>
+                    <li>David Chen – 9 Project Contributions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+ 
 
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
-                const ctx = document.getElementById('completionChart').getContext('2d');
-                const completionChart = new Chart(ctx, {
-                  type: 'line',
-                  data: {
-                    labels: ['2022', '2023', '2024'],
-                    datasets: [{
-                      label: 'Performance Score %',
-                      data: [45, 60, 70, 75, 82, 90],
-                      borderColor: '#3B82F6',
-                      backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                      tension: 0.4,
-                      fill: true,
-                      pointBackgroundColor: '#3B82F6',
-                      pointRadius: 5
-                    }]
-                  },
-                  options: {
-                    responsive: true,
-                    plugins: {
-                      legend: {
-                        display: true,
-                        position: 'top'
-                      },
-                      tooltip: {
-                        enabled: true
-                      }
-                    },
-                    scales: {
-                      y: {
-                        beginAtZero: true,
-                        max: 100,
-                        title: {
-                          display: true,
-                          text: 'Manager Evaluation Score %'
+                                document.addEventListener("DOMContentLoaded", function () {
+                    const ctx = document.getElementById('completionChart').getContext('2d');
+
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
+                            datasets: [{
+                                label: 'Performance Score %',
+                                data: [45, 60, 70, 75, 82, 90],
+                                borderColor: '#3B82F6',
+                                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                                borderWidth: 2,
+                                tension: 0.4,
+                                fill: true,
+                                pointBackgroundColor: '#3B82F6',
+                                pointRadius: 5
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false, // Allows Bootstrap responsiveness
+                            plugins: {
+                                legend: {
+                                    display: true,
+                                    position: 'top'
+                                },
+                                tooltip: {
+                                    enabled: true
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    max: 100,
+                                    title: {
+                                        display: true,
+                                        text: 'Manager Evaluation Score %'
+                                    }
+                                },
+                                x: {
+                                    title: {
+                                        display: true,
+                                        text: 'Year'
+                                    }
+                                }
+                            }
                         }
-                      },
-                      x: {
-                        title: {
-                          display: true,
-                          text: 'Year'
-                        }
-                      }
-                    }
-                  }
+                    });
                 });
-            </script>
+
+            </script> *@
         </div>
         
 

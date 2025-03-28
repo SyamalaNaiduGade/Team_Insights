@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 3-4\\Team_Insights\\TeamInsights\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 3-12 SPRINT 3\\Team_Insights\\TeamInsights\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 3-12 sprint 3\\team_insights\\teaminsights\\teaminsights\\views\\home\\managers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\home\\managers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +14,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -30,6 +39,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Managers.cshtml",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 3-12 SPRINT 3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Managers.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Home\\Managers.cshtml",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 3-12 SPRINT 3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Managers.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Home\\Managers.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJUAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T00:05:31.178Z",
+              "EditorCaption": ""
             }
           ]
         }
