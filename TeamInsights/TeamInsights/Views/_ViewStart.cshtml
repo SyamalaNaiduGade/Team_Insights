@@ -1,10 +1,10 @@
-﻿@{
+﻿﻿@{
     string currentController = ViewContext.RouteData.Values["controller"].ToString();
     string currentAction = ViewContext.RouteData.Values["action"].ToString();
 
     if (currentController == "Splash" && currentAction == "Index")
     {
-        Layout = "~/Views/Shared/_SplashLayout.cshtml"; // Special layout for the home page
+        Layout = "~/Views/Shared/_SplashLayout.cshtml"; // Special layout for the splash page
     }
     else
     {
