@@ -3,126 +3,118 @@
 
 @{
     ViewData["Title"] = "Create an Account";
+    Layout = null;
 }
 
-<div class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px; border-radius: 20px; background-color: #f9f9f9;">
-        <h2 class="text-center mb-4 text-primary">Create a New Account</h2>
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger text-center mb-3" role="alert"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Team Insights</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TeamInsights.styles.css" asp-append-version="true" />
+</head>
+<body class="dark-theme">
 
-            <!-- Styled Input Field -->
-            <div class="form-floating mb-4 position-relative">
-                <input asp-for="Input.Email" class="form-control custom-input" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email">Email</label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
-            </div>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow-lg p-4 login-card">
+            <h2 class="text-center mb-3 text-dark">Register</h2>
 
-            <div class="form-floating mb-4 position-relative">
-                <input asp-for="Input.Password" type="password" class="form-control custom-input" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.Password">Password</label>
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
+            <form id="registerForm" method="post" asp-route-returnUrl="@Model.ReturnUrl">
+                <div asp-validation-summary="ModelOnly" class="text-danger text-center mb-3" role="alert"></div>
 
-            <div class="form-floating mb-4 position-relative">
-                <input asp-for="Input.ConfirmPassword" type="password" class="form-control custom-input" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
+                <div class="mb-3">
+                    <label asp-for="Input.Email" class="form-label text-dark">Email</label>
+                    <input asp-for="Input.Email" class="form-control custom-input" autocomplete="username" placeholder="Enter your email address" required />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
 
-            <!-- Styled Button -->
-            <button id="registerSubmit" type="submit" class="btn btn-primary w-100 py-2 custom-button">
-                Register
-            </button>
-        </form>
+                <div class="mb-3">
+                    <label asp-for="Input.Password" class="form-label text-dark">Password</label>
+                    <input asp-for="Input.Password" type="password" class="form-control custom-input" autocomplete="new-password" placeholder="Enter your password" required />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
 
-        <p class="text-center mt-4">
-            Already have an account?
-            <a asp-page="./Login" class="text-decoration-none text-success fw-bold" asp-route-returnUrl="@Model.ReturnUrl">Login</a>
-        </p>
+                <div class="mb-3">
+                    <label asp-for="Input.ConfirmPassword" class="form-label text-dark">Confirm Password</label>
+                    <input asp-for="Input.ConfirmPassword" type="password" class="form-control custom-input" autocomplete="new-password" placeholder="Re-enter your password" required />
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2 custom-button">
+                    Register
+                </button>
+
+                <div class="text-center mt-3">
+                    <p>
+                        <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl" class="text-decoration-none text-primary link-hover">Already have an account? Login</a>
+                    </p>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<video autoplay muted loop plays-inline class="background-clip">
-    <source src="~/Images/connections2.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+    <footer class="text-muted text-center mt-4 text-light">
+        &copy; 2025 - Team Insights - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-light">Privacy</a>
+    </footer>
 
-@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     <partial name="_ValidationScriptsPartial" />
-}
 
-<style>
-    /* Background Styling */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Roboto", serif;
-    }
-
-    .section {
-        width: 100%;
-        height: 100vh;
-        /* background-color: rgba(0,0,0,.9);*/
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    .background-clip {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        filter: brightness(40%);
-        z-index: -1;
-    }
-
-    /* Input Field Styling */
-    .custom-input {
-        border: 2px solid #ddd;
-        border-radius: 10px;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-        .custom-input:focus {
-            border-color: #007bff;
-            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-            outline: none;
+    <style>
+        /* Dark Theme Background */
+        .dark-theme {
+            background-color: #000;
+            color: #fff;
         }
 
-        .custom-input:hover {
-            border-color: #0056b3;
+        /* White Form Card */
+        .login-card {
+            background: #fff;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
-    /* Button Styling */
-    .custom-button {
-        background: linear-gradient(90deg, #007bff, #0056b3);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease-in-out;
-    }
-
-        .custom-button:hover {
-            background: linear-gradient(90deg, #0056b3, #003a80);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-            transform: translateY(-2px);
+        /* Input Fields */
+        .custom-input {
+            background: #fff;
+            border: 2px solid #ddd;
+            color: #333;
+            border-radius: 8px;
+            transition: 0.3s;
+            padding: 10px;
         }
 
-        .custom-button:active {
-            transform: translateY(2px);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            .custom-input:focus {
+                border-color: #007BFF;
+                box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+            }
+
+        /* Button */
+        .custom-button {
+            background: linear-gradient(to right, #007BFF, #0056B3);
+            border: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-    /* Form Card Styling */
-    .card {
-        background: #ffffff;
-        border: none;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-</style>
+            .custom-button:hover {
+                background: linear-gradient(to right, #0056B3, #003F7F);
+            }
+
+        /* Links */
+        .link-hover:hover {
+            text-decoration: underline;
+            color: #007BFF;
+        }
+    </style>
+
+</body>
+</html>

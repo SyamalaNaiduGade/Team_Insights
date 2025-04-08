@@ -31,20 +31,29 @@
             </div>
         </nav> *@
     </header>
+
     <div class="container">
         <main role="main">
             @RenderBody()
         </main>
+
+     @*    @if (!Context.Request.Path.Value.Contains("Account/Login", StringComparison.OrdinalIgnoreCase))
+        {
+            <div class="user-profile mt-auto">
+                <partial name="_LoginPartial" />
+            </div>
+        }
+ *@
         <footer class="text-muted text-center">
             &copy; 2025 - Team Insights - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-
         </footer>
     </div>
 
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

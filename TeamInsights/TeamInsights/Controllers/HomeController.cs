@@ -18,6 +18,8 @@ namespace TeamInsights.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            var userName = User.Identity.Name; // This gets the username of the logged-in user
+            ViewData["UserName"] = userName;
             var managerCount = await _context.People
                 .Where(p => _context.People.Any(e => e.ManagerID == p.PersonID))
                 .CountAsync(); var employeeCount = await _context.People

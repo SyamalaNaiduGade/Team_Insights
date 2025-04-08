@@ -4,45 +4,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TeamInsights</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> 
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TeamInsights.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        @*         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Team Insights</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav> *@
+        <!-- Include your navigation bar or other header content here -->
     </header>
-    <div class="container">
-        <main role="main">
+
+    <div class="container-fluid d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar d-flex flex-column p-3" style="width: 250px; height: 100vh; position: fixed; background-color: #f8f9fa;">
+            <video id="logo-video" autoplay playsinline muted style="max-width: 100%; margin-bottom: 20px;">
+                <source src="~/Images/logo.mp4" type="video/mp4">
+            </video>
+            <nav>
+                <ul class="nav flex-column">
+                    <li><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
+                    <li><a asp-controller="People" asp-action="Index" class="nav-link">People</a></li>
+                    <li><a asp-controller="Projects" asp-action="Index" class="nav-link">Projects</a></li>
+                    <li><a asp-controller="Roles" asp-action="Index" class="nav-link">Roles</a></li>
+                    <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li>
+                    <li><a asp-controller="Evaluations" asp-action="Index" class="nav-link">Evaluations</a></li>
+                    <li><a asp-controller="Performances" asp-action="Index" class="nav-link">Performance Metrics</a></li>
+                    <li><a asp-controller="EmployeeSkills" asp-action="SkillCertificationMatrix" class="nav-link">Performance Matrix</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-fill p-4" style="margin-left: 250px;">
+            <!-- This is where the main content from views will be rendered -->
             @RenderBody()
         </main>
-        <footer class="text-muted text-center">
-            &copy; 2025 - Team Insights - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-
-        </footer>
-
     </div>
 
+    <!-- User Profile (Username and Logout) Section below other content -->
+    <div class="user-profile mt-4">
+        <button class="profile-btn d-flex align-items-center border p-2 rounded-3 shadow-sm w-100">
+            <img src="/images/default-avatar.jpg" alt="User Avatar" class="avatar rounded-circle me-3" style="width: 40px; height: 40px;">
+            <div class="d-flex flex-column">
+                <!-- Displaying the email of the logged-in user -->
+                <span class="small text-truncate" style="max-width: calc(100% - 60px);"><strong>@User.Identity.Name</strong></span>
+            </div>
+        </button>
 
+        <div class="dropdown-menu mt-2">
+            <a asp-controller="Profile" asp-action="Index" class="dropdown-item">Profile</a>
+            <a asp-controller="Splash" asp-action="Index" class="dropdown-item">Logout</a>
+        </div>
+    </div>
+
+    <footer class="text-muted text-center">
+        &copy; 2025 - Team Insights - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

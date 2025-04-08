@@ -1,7 +1,136 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 3-4\\Team_Insights\\TeamInsights\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\employeeskills\\skillcertificationmatrix.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\employeeskills\\skillcertificationmatrix.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\projects\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\projects\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\people\\performance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\people\\performance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\home\\managers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\home\\managers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\home\\employees.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\home\\employees.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\roles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\roles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\performances\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\performances\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\people\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\people\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\evaluations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\evaluations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\contributions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\contributions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\employeeskillscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\employeeskillscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\shared\\_splashlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\shared\\_splashlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\views\\splash\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\splash\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\certificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\certificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\skillscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\skillscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\performancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\performancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\evaluationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\evaluationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\employeerolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\employeerolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\employeecertificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\employeecertificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\controllers\\contributionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\controllers\\contributionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\ajayk\\onedrive\\desktop\\sprint-3\\team_insights\\teaminsights\\teaminsights\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +138,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -25,11 +162,396 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SkillCertificationMatrix.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\EmployeeSkills\\SkillCertificationMatrix.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\EmployeeSkills\\SkillCertificationMatrix.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\EmployeeSkills\\SkillCertificationMatrix.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\EmployeeSkills\\SkillCertificationMatrix.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T23:32:23.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T13:23:18.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Projects\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Projects\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Projects\\Index.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Projects\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T20:09:11.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Roles\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Roles\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Roles\\Index.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Roles\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T20:09:19.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Employees.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Employees.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Home\\Employees.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Employees.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Home\\Employees.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T20:14:56.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Performance.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\People\\Performance.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\People\\Performance.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\People\\Performance.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\People\\Performance.cshtml",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAALYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T23:09:41.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Managers.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Managers.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Home\\Managers.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Managers.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Home\\Managers.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T20:14:46.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Performances\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Performances\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Performances\\Index.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Performances\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T20:09:02.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Evaluations\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Evaluations\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Evaluations\\Index.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Evaluations\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T20:08:37.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\People\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\People\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\People\\Index.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\People\\Index.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAYwAUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T20:08:50.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Contributions\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Contributions\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Contributions\\Index.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Contributions\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T20:08:15.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T13:16:12.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T13:16:31.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PeopleController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\PeopleController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\PeopleController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\PeopleController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\PeopleController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:12:14.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EmployeeSkillsController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\EmployeeSkillsController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\EmployeeSkillsController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\EmployeeSkillsController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\EmployeeSkillsController.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAqwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:10:33.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_SplashLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Shared\\_SplashLayout.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Shared\\_SplashLayout.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Shared\\_SplashLayout.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Shared\\_SplashLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T13:16:42.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Splash\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Splash\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Splash\\Index.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Splash\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T13:18:09.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CertificationsController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\CertificationsController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\CertificationsController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\CertificationsController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\CertificationsController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:08:48.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:11:41.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T13:08:00.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T13:07:06.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Program.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Program.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Program.cs",
+              "RelativeToolTip": "TeamInsights\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:58:24.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAiwHUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:07:35.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SkillsController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\SkillsController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\SkillsController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\SkillsController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\SkillsController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:13:32.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\RolesController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\RolesController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:13:16.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\ProjectsController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\ProjectsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:12:51.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PerformancesController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\PerformancesController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\PerformancesController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\PerformancesController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\PerformancesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:12:22.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "EvaluationsController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\EvaluationsController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\EvaluationsController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\EvaluationsController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\EvaluationsController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:11:12.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "EmployeeRolesController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\EmployeeRolesController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\EmployeeRolesController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\EmployeeRolesController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\EmployeeRolesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:10:17.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EmployeeCertificationsController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\EmployeeCertificationsController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\EmployeeCertificationsController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\EmployeeCertificationsController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\EmployeeCertificationsController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:09:26.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ContributionsController.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\ContributionsController.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Controllers\\ContributionsController.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Controllers\\ContributionsController.cs",
+              "RelativeToolTip": "TeamInsights\\Controllers\\ContributionsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:09:09.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\ajayk\\OneDrive\\Desktop\\Sprint-3\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAIwNIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:08:18.088Z"
             }
           ]
         }

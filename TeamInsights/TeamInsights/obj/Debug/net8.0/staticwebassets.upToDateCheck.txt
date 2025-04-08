@@ -5,6 +5,7 @@ wwwroot\Images\background.webp
 wwwroot\Images\bglogin.webp
 wwwroot\Images\connections.mp4
 wwwroot\Images\connections2.mp4
+wwwroot\Images\default-avatar.jpg
 wwwroot\Images\logo.mp4
 wwwroot\Images\uifaces-popular-image.jpg
 wwwroot\js\site.js

@@ -23,6 +23,8 @@ namespace TeamInsights.Controllers
         // GET: People
         public async Task<IActionResult> Index()
         {
+            var userName = User.Identity.Name; // This gets the username of the logged-in user
+            ViewData["UserName"] = userName;
             var teamInsightsContext = _context.People.Include(p => p.Manager);
             return View(await teamInsightsContext.ToListAsync());
         }
