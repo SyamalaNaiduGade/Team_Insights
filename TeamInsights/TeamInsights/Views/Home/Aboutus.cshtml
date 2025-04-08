@@ -1,0 +1,229 @@
+﻿@{
+    ViewData["Title"] = "Team Insights";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #F8F9FA;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .button {
+            background-color: #28A745;
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+
+            .button:hover {
+                background-color: #218838;
+                transform: translateY(-2px);
+            }
+
+        .card {
+            background-color: #FFFFFF;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+            }
+
+        .icon {
+            font-size: 50px;
+            color: #28A745;
+            margin-bottom: 15px;
+        }
+
+        .section-container {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            padding-top: 40px;
+        }
+
+        .row {
+            margin-bottom: 30px;
+        }
+
+        .card h4 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 16px;
+            color: #666;
+        }
+        /* Responsive Adjustments */
+        (max-width: 768px) {
+            .icon
+
+        {
+            font-size: 40px;
+        }
+
+        .card h4 {
+            font-size: 20px;
+        }
+
+        .card-text {
+            font-size: 14px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        }
+        /* Section Titles */
+        .text-center h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-top: 20px;
+        }
+        /* Contact Info Styling */
+        .contact-info {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        /* Styling for video */
+        #logo-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
+</head>
+<div class="container-fluid d-flex">
+
+    <!-- Main Content -->
+    <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
+<body>
+    <div class="text-center">
+        <h1>Team Insights</h1>
+    </div>
+    <div class="section-container">
+        <p>
+            Our teams thrive on collaboration, innovation, and a shared commitment to excellence, bringing together diverse skills and expertise to drive success in every project. The "Team Insights" initiative showcases the strengths, achievements, and contributions of our team members, highlighting key roles, successful collaborations, and the dynamic synergy that fuels our work culture. By fostering transparency and continuous learning, we empower our team to excel through open communication, structured feedback, and knowledge sharing, which are at the core of our growth and success.
+        </p>
+    </div>
+    <!-- Team Insights Sections -->
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-users icon"></i>
+                        <h4>Meet the Team</h4>
+                        <p>Get to know our team members, their expertise, and their roles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-trophy icon"></i>
+                        <h4>Success Stories</h4>
+                        <p>Explore real-life case studies of successful projects and collaborations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-lightbulb icon"></i>
+                        <h4>Innovations & Ideas</h4>
+                        <p>Learn how our teams drive creativity and problem-solving.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-medal icon"></i>
+                        <h4>Recognition & Achievements</h4>
+                        <p>Celebrate milestones, promotions, and outstanding contributions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-handshake icon"></i>
+                        <h4>Collaboration Highlights</h4>
+                        <p>See how different teams work together to achieve excellence.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-book-open icon"></i>
+                        <h4>Learning & Development</h4>
+                        <p>Stay updated on training programs, mentorship, and career growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Info Section -->
+    <p class="contact-info"><strong>For more queries, Please contact - 1800-304-2894</strong></p>
+    <!-- Go to Home Button -->
+    <div class="content">
+        <a href="@Url.Action("Index", "Home")" class="button">Go to Home</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</main>
+</div>
+</html>

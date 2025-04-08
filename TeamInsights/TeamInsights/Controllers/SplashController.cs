@@ -8,5 +8,9 @@ namespace TeamInsights.Controllers
         {
             return View();
         }
+        public IActionResult Aboutus()
+        {
+            return View();
+        }
     }
 }

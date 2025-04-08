@@ -1,0 +1,53 @@
+﻿@model List<TeamInsights.Models.Person>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid d-flex">
+
+    <!-- Main Content -->
+    <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
+        <h1>Employees List</h1>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Hire Date</th>
+                        <th>Experience (Years)</th>
+                        <th>Manager</th>
+                        <th>Performance</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var employee in Model)
+                    {
+                        <tr>
+                            <td>@employee.FirstName</td>
+                            <td>@employee.LastName</td>
+                            <td>@employee.Email</td>
+                            <td>@employee.HireDate.ToString("dd-MM-yyyy")</td>
+                            <td>@employee.Experience</td>
+                            <td>@(employee.Manager != null ? employee.Manager.FirstName + " " + employee.Manager.LastName : "-")</td>
+                            <td>
+                                <a asp-controller="People" asp-action="Performance" asp-route-personId="@employee.PersonID" class="btn from-right">View Performance</a>
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Edit", "People", new { id = employee.PersonID })">Edit</a> |
+                                <a href="@Url.Action("Details", "People", new { id = employee.PersonID })">Details</a> |
+                                <a href="@Url.Action("Delete", "People", new { id = employee.PersonID })" onclick="return confirm('Are you sure?')">Delete</a> |
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p>
+                <a href="@Url.Action("Index", "Home")" class="btn from-right">Back to Dashboard</a>
+            </p>
+        </div>
+    </main>
+</div>

@@ -1,254 +1,465 @@
-﻿@* @model TeamInsights.ViewModels.PerformanceReportViewModel (You would use this line if you pass the performance view Model)*@
-
-@{
+﻿﻿@{
     ViewData["Title"] = "Index";
+}
+@{
+    // Retrieve the data passed from the controller
+    var topPerformers = ViewData["TopPerformers"] as List<TeamInsights.ViewModels.TopPerformerViewModel>;
 }
 
 <div class="container-fluid d-flex">
-    <!-- Sidebar -->
-    <aside class="sidebar d-flex flex-column p-3 me-4" style="width: 250px">
-        @* <h2 class="logo text-center">Team Insights Management System</h2> *@
-        <video id="logo-video" autoplay playsinline muted>
-            <source src="~/Images/logo.mp4" type="video/mp4">
-        </video>
-        <nav>
-            <ul class="nav flex-column">
-                <li><a asp-controller="Home" asp-action="Index" class="nav-link active">Home</a></li>
-                <li><a asp-controller="People" asp-action="Index" class="nav-link">People</a></li>
-                <li><a asp-controller="Projects" asp-action="Index" class="nav-link">Projects</a></li>
-                <li><a asp-controller="Roles" asp-action="Index" class="nav-link">Roles</a></li>
-                <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li>
-                <li><a asp-controller="Evaluations" asp-action="Index" class="nav-link">Evaluations</a></li>
-                <li><a asp-controller="Performances" asp-action="Index" class="nav-link">Performance Metrics</a></li>
-            </ul>
-        </nav>
-        <div class="user-profile mt-auto">
-            <button class="profile-btn d-flex align-items-center border p-2 rounded-3 shadow-sm w-100">
-                <img src="images/uifaces-popular-image.jpg" alt="User Avatar" class="avatar rounded-circle me-3" style="width: 40px; height: 40px;">
-                <div>
-                    <p class="m-0"><strong>Team Insights Admin</strong></p>
-                    <span class="small">teaminsightsadmin@mail.com</span>
 
-                </div>
-            </button>
-            <div class="dropdown-menu mt-2">
-                <a href="#" class="dropdown-item">Profile</a>
-                <a href="#" class="dropdown-item">Settings</a>
-                <a asp-controller="Splash" asp-action="Index" class="dropdown-item">Logout</a>
-            </div>
-        </div>
-    </aside>
 
     <!-- Main Content -->
     <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
-        <h1 class="home-header mb-10" style="font-size: 42px; font-weight: 500;">Home</h1>
-        <div class="tailwind-section">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-
-            <!-- Manager & Leadership Insights -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">Manager & Leadership Insights</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">👩‍💼 Alice Johnson</h3>
-                        <p><strong>Position:</strong> Senior Project Manager</p>
-                        <p><strong>Projects Led:</strong> 3</p>
-                        <p><strong>Team Size:</strong> 6 Employees</p>
-                        <p><strong>Experience:</strong> 10+ years</p>
-                        <blockquote class="italic text-gray-600 border-l-4 border-blue-300 pl-3 mt-2">
-                            "I believe in data-driven leadership."
-                        </blockquote>
+        <h1 class="home-header mb-10">Home</h1>
+        <div class="home-cards">
+            <section class="mb-4">
+                <h2 class="h4 fw-bold mb-3">Manager & Leadership Insights</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="bg-white shadow-sm rounded-3 p-4">
+                            <h3 class="h5 fw-semibold mb-1">Managers</h3>
+                            <p><strong>Total: @ViewBag.ManagerCount</strong></p>
+                            <a href="@Url.Action("Managers", "Home")" class="btn from-right mt-3">View Managers</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="bg-white shadow-sm rounded-3 p-4">
+                            <h3 class="h5 fw-semibold mb-1">Employees</h3>
+                            <p><strong>Total: @ViewBag.EmployeeCount</strong></p>
+                            <a href="@Url.Action("Employees", "Home")" class="btn from-right mt-3">View Employees</a>
+                        </div>
                     </div>
                 </div>
             </section>
+  @*          <form asp-action="Index" method="get" class="mb-4">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="roleFilter" class="col-form-label">Filter by Role:</label>
+        </div>
+        <div class="col-auto">
+            <select name="roleFilter" id="roleFilter" class="form-select" onchange="this.form.submit()">
+                <option value="">-- All Roles --</option>
+                @foreach (var role in (SelectList)ViewData["Roles"])
+                {
+                    var selected = ViewData["SelectedRole"]?.ToString() == role.Text ? "selected" : "";
+                    <option value="@role.Text" selected>@role.Text</option>
+                }
+            </select>
+        </div>
+    </div>
+</form> *@
+            <div class="mt-4">
+                <h2>Top 5 Performers</h2>
+                <p>
+                    <strong>Performance Score Breakdown:</strong>
+                    Evaluation Score (50%) | Project Contributions (30%) | Hours Worked (20%)
+                </p>
+                @if (ViewBag.TopPerformers != null && (ViewBag.TopPerformers as List<TeamInsights.ViewModels.TopPerformerViewModel>).Any())
+                {
+                    <!-- 1. Top 5 Performers Table -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Employee Name</th>
+                                <th>Performance Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var (performer, index) in (ViewBag.TopPerformers as List<TeamInsights.ViewModels.TopPerformerViewModel>).Select((p, i) => (p, i + 1)))
+                            {
+                                <tr>
+                                    <td>@index</td>
+                                    <td>@performer.EmployeeName</td>
+                                    <td>@performer.PerformanceScore.ToString("N2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <!-- 2. Bar Chart for Top Performers -->
+                    <div class="mt-3">
+                        <canvas id="topPerformersChart"></canvas>
+                    </div>
+                    <!-- 3. Pie Chart for Performance Breakdown -->
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div style="flex: 1; max-width: 400px;">
+                                <canvas id="performanceBreakdownChart" style="max-height: 300px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4. Donut Chart for Role Distribution -->
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div style="flex: 1; max-width: 400px;">
+                                <canvas id="roleDonutChart" style="max-height: 300px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p>No performance data available yet.</p>
+                }
+            </div>
 
-            <!-- Quick Project Summary Cards -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">Quick Project Summary Cards</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">🧠 Predictive Planning</h3>
-                        <p><strong>Start:</strong> Jan 2024 – <strong>End:</strong> June 2024</p>
-                        <p><strong>Manager:</strong> Alice Johnson</p>
-                        <p><strong>Team:</strong> 👥 6 Employees</p>
-                        <div class="mt-2">
-                            <div class="bg-gray-200 rounded-full h-3 w-full">
-                                <div class="bg-blue-500 h-3 rounded-full w-4/5"></div>
-                            </div>
-                            <p class="text-sm mt-1 text-gray-600">Progress: 80%</p>
-                        </div>
+          @*   <div>
+            @if (topPerformers != null && topPerformers.Any())
+            {
+                <section class="mb-5">
+                    <h2 class="h4 mb-2">
+                        <i class="fas fa-trophy text-warning me-2"></i>Top 5 Performers
+                    </h2>
+                    <p class="text-muted small mb-3">
+                        <i class="fas fa-chart-bar me-1"></i>Score Breakdown: 40% Projects | 30% Evaluations | 20% Skills | 10% Hours
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col" style="width: 15%;">Rank</th>
+                                    <th scope="col">@Html.DisplayNameFor(model => topPerformers.First().EmployeeName)</th>
+                                    <th scope="col" style="width: 25%;">@Html.DisplayNameFor(model => topPerformers.First().PerformanceScore)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var performer in topPerformers)
+                                {
+                                    <tr>
+                                        <td>
+                                            @if (performer.Rank == 1)
+                                            {
+                                                <i class="fas fa-medal text-warning me-1"></i> @performer.Rank
+                                            }
+                                            else if (performer.Rank == 2)
+                                            {
+                                                <i class="fas fa-medal text-secondary me-1"></i> @performer.Rank
+                                            }
+                                            else if (performer.Rank == 3)
+                                            {
+                                                <i class="fas fa-medal" style="color: #CD7F32;"></i> @performer.Rank <!-- Inline style for bronze -->
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-info text-dark rounded-pill">@performer.Rank</span>
+                                            }
+                                        </td>
+                                        <td>@performer.EmployeeName</td>
+                                        <td>@performer.PerformanceScore</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">🔍 Project Retrospective</h3>
-                        <p><strong>Start:</strong> March 2024 – <strong>End:</strong> Aug 2024</p>
-                        <p><strong>Manager:</strong> Brian Carter</p>
-                        <p><strong>Team:</strong> 👥 5 Employees</p>
-                        <div class="mt-2">
-                            <div class="bg-gray-200 rounded-full h-3 w-full">
-                                <div class="bg-green-500 h-3 rounded-full w-2/5"></div>
-                            </div>
-                            <p class="text-sm mt-1 text-gray-600">Progress: 40%</p>
-                        </div>
-                    </div>
-                </div>
+                </section>
+            }
+            else
+            {
+                <p>No performance data available to determine top performers.</p>
+            }
+            @* --- End of Top 5 Performers Section --- *@
+
+
+
+            @*                      <!-- Quick Project Summary Cards -->
+            <section class="mb-4">
+            <h2 class="h4 fw-bold mb-3">Quick Project Summary Cards</h2>
+            <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="bg-white shadow-sm rounded-3 p-4">
+            <h3 class="h5 fw-semibold mb-1">🧠 Predictive Planning</h3>
+            <p><strong>Start:</strong> Jan 2024 – <strong>End:</strong> June 2024</p>
+            <p><strong>Manager:</strong> Alice Johnson</p>
+            <p><strong>Team:</strong> 👥 6 Employees</p>
+            <div class="mt-2">
+            <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-primary" style="width: 80%;"></div>
+            </div>
+            <p class="small text-muted mt-1">Progress: 80%</p>
+            </div>
+            </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="bg-white shadow-sm rounded-3 p-4">
+            <h3 class="h5 fw-semibold mb-1">🔍 Project Retrospective</h3>
+            <p><strong>Start:</strong> March 2024 – <strong>End:</strong> Aug 2024</p>
+            <p><strong>Manager:</strong> Brian Carter</p>
+            <p><strong>Team:</strong> 👥 5 Employees</p>
+            <div class="mt-2">
+            <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-success" style="width: 40%;"></div>
+            </div>
+            <p class="small text-muted mt-1">Progress: 40%</p>
+            </div>
+            </div>
+            </div>
+            </div>
             </section>
 
             <!-- Project Completion Trends Chart Placeholder -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">📈 Project Performance Trend Over Time</h2>
-                <div class="bg-white rounded-2xl p-6 shadow-md text-gray-600 text-sm">
-                    <canvas id="completionChart" class="w-full h-64"></canvas>
-                </div>
+            <section class="mb-4">
+            <h2 class="h4 fw-bold mb-3">📈 Project Performance Trend Over Time</h2>
+            <div class="bg-white rounded-3 p-4 shadow-sm text-muted small">
+            <canvas id="completionChart" class="w-100" style="height: 250px;"></canvas>
+            </div>
             </section>
 
             <!-- Team Collaboration Insights -->
-            <section class="mb-10">
-                <h2 class="text-2xl font-bold mb-4">🤝 Team Collaboration Insights</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-white shadow-md rounded-2xl p-4">
-                        <h3 class="text-lg font-semibold mb-1">Most Active Collaborators</h3>
-                        <ul class="list-disc list-inside text-gray-700">
-                            <li>Michael Lee – 12 Project Contributions</li>
-                            <li>Sarah Patel – 10 Project Contributions</li>
-                            <li>David Chen – 9 Project Contributions</li>
-                        </ul>
-                    </div>
-                </div>
+            <section class="mb-4">
+            <h2 class="h4 fw-bold mb-3">🤝 Team Collaboration Insights</h2>
+            <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="bg-white shadow-sm rounded-3 p-4">
+            <h3 class="h5 fw-semibold mb-1">Most Active Collaborators</h3>
+            <ul class="list-unstyled text-muted">
+            <li>Michael Lee – 12 Project Contributions</li>
+            <li>Sarah Patel – 10 Project Contributions</li>
+            <li>David Chen – 9 Project Contributions</li>
+            </ul>
+            </div>
+            </div>
+            </div>
             </section>
+
 
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
-                const ctx = document.getElementById('completionChart').getContext('2d');
-                const completionChart = new Chart(ctx, {
-                    type: 'line',
+            document.addEventListener("DOMContentLoaded", function () {
+            const ctx = document.getElementById('completionChart').getContext('2d');
+
+            new Chart(ctx, {
+            type: 'line',
+            data: {
+            labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
+            datasets: [{
+            label: 'Performance Score %',
+            data: [45, 60, 70, 75, 82, 90],
+            borderColor: '#3B82F6',
+            backgroundColor: 'rgba(59, 130, 246, 0.2)',
+            borderWidth: 2,
+            tension: 0.4,
+            fill: true,
+            pointBackgroundColor: '#3B82F6',
+            pointRadius: 5
+            }]
+            },
+            options: {
+            responsive: true,
+            maintainAspectRatio: false, // Allows Bootstrap responsiveness
+            plugins: {
+            legend: {
+            display: true,
+            position: 'top'
+            },
+            tooltip: {
+            enabled: true
+            }
+            },
+            scales: {
+            y: {
+            beginAtZero: true,
+            max: 100,
+            title: {
+            display: true,
+            text: 'Manager Evaluation Score %'
+            }
+            },
+            x: {
+            title: {
+            display: true,
+            text: 'Year'
+            }
+            }
+            }
+            }
+            });
+            });
+
+            </script> *@
+        </div>
+
+
+
+    </main>
+</div>
+
+@*Graphics*@
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var topPerformersData = @Html.Raw(Json.Serialize(ViewBag.TopPerformers));
+            var roleDistributionData = @Html.Raw(Json.Serialize(ViewBag.RoleDistribution));
+            // 1. Bar Chart for Top Performers
+            if (topPerformersData && topPerformersData.length > 0) {
+                var barChartLabels = topPerformersData.map(function (performer) {
+                    return performer.employeeName;
+                });
+                var barChartScores = topPerformersData.map(function (performer) {
+                    return performer.performanceScore;
+                });
+                var darkBarColors = [
+                    'rgba(176, 47, 21, 0.8)',
+                    'rgba(242, 211, 7, 0.8)',
+                    'rgba(21, 87, 115, 0.8)',
+                    'rgba(113, 115, 21, 0.8)',
+                    'rgba(163, 20, 91, 0.8)'
+                ];
+                var barChartBackgroundColors = barChartScores.map(function (score, index) {
+                    return darkBarColors[index % darkBarColors.length];
+                });
+                var barChartBorderColors = barChartBackgroundColors.map(color => color.replace('0.8', '1'));
+                var barChartCtx = document.getElementById('topPerformersChart').getContext('2d');
+                var topPerformersChart = new Chart(barChartCtx, {
+                    type: 'bar',
                     data: {
-                        labels: ['2022', '2023', '2024'],
+                        labels: barChartLabels,
                         datasets: [{
-                            label: 'Performance Score %',
-                            data: [45, 60, 70, 75, 82, 90],
-                            borderColor: '#3B82F6',
-                            backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                            tension: 0.4,
-                            fill: true,
-                            pointBackgroundColor: '#3B82F6',
-                            pointRadius: 5
+                            label: 'Performance Score',
+                            data: barChartScores,
+                            backgroundColor: barChartBackgroundColors,
+                            borderColor: barChartBorderColors,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: { beginAtZero: true, title: { display: true, text: 'Performance Score' } },
+                            x: { title: { display: true, text: 'Employee Name' } }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            title: { display: true, text: 'Top 5 Performers - Performance Scores', font: { size: 16 } }
+                        }
+                    }
+                });
+                // 2. Pie Chart for Performance Breakdown
+                var pieChartCtx = document.getElementById('performanceBreakdownChart').getContext('2d');
+                var performanceBreakdownChart = new Chart(pieChartCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Evaluation Score (50%)', 'Project Contributions (30%)', 'Hours Worked (20%)'],
+                        datasets: [{
+                            data: [50, 30, 20],
+                            backgroundColor: [
+                                'rgba(139, 0, 0, 0.8)',  // Dark Red (Evaluation Score)
+                                'rgba(255, 255, 0, 0.8)', // Yellow (Project Contributions)
+                                'rgba(0, 128, 128, 0.8)' // Teal (Hours Worked)
+                            ],
+                            borderColor: [
+                                'rgba(139, 0, 0, 1)',
+                                'rgba(255, 255, 0, 1)',
+                                'rgba(0, 128, 128, 1)'
+                            ],
+                            borderWidth: 1
                         }]
                     },
                     options: {
                         responsive: true,
                         plugins: {
                             legend: {
+                                position: 'right',
+                                labels: {
+                                    boxWidth: 20,
+                                    padding: 15,
+                                    font: { size: 12 }
+                                }
+                            },
+                            title: {
                                 display: true,
-                                position: 'top'
+                                text: 'Overall Performance Score Breakdown',
+                                font: { size: 16 },
+                                padding: { bottom: 20 }
                             },
                             tooltip: {
-                                enabled: true
+                                callbacks: {
+                                    label: function (context) {
+                                        var label = context.label || '';
+                                        if (context.parsed !== null) {
+                                            label += ': ' + context.parsed + '%';
+                                        }
+                                        return label;
+                                    }
+                                }
                             }
                         },
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                max: 100,
-                                title: {
-                                    display: true,
-                                    text: 'Manager Evaluation Score %'
-                                }
-                            },
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: 'Year'
-                                }
-                            }
+                        layout: {
+                            padding: { right: 20 }
                         }
                     }
                 });
-            </script>
-        </div>
-    </main>
-
-    <!-- Chatbot Container (at the end of the main content) -->
-    <div class="chatbot-container fixed bottom-5 right-5 z-50">
-        <button id="chatbot-toggle" class="chatbot-toggle bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-md">
-            <img src="message-icon.png" alt="Chatbot" width="30" class="align-middle">  <!-- Replace with your icon -->
-        </button>
-
-        <div id="chatbot-window" class="chatbot-window hidden absolute bottom-20 right-0 w-96 bg-white border border-gray-300 rounded-lg shadow-lg">
-            <div class="chatbot-header bg-blue-500 text-white p-3 rounded-t-lg flex items-center justify-between">
-                <span class="chatbot-title text-lg font-semibold">Team Insights Bot</span>
-                <button id="chatbot-close" class="chatbot-close text-xl font-bold">×</button>
-            </div>
-            <div id="chatbot-messages" class="chatbot-messages p-4 h-64 overflow-y-auto">
-                <!-- Chat messages will be displayed here -->
-            </div>
-            <div class="chatbot-input-area p-3 border-t border-gray-300 flex">
-                <input type="text" id="chatbot-input" class="chatbot-input flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your question...">
-                <button id="chatbot-send" class="chatbot-send bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md ml-2">Send</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Chatbot JavaScript Logic
-        const chatbotToggle = document.getElementById('chatbot-toggle');
-        const chatbotWindow = document.getElementById('chatbot-window');
-        const chatbotClose = document.getElementById('chatbot-close');
-        const chatbotInput = document.getElementById('chatbot-input');
-        const chatbotSend = document.getElementById('chatbot-send');
-        const chatbotMessages = document.getElementById('chatbot-messages');
-
-        // Sample questions and answers
-        const faq = {
-            "What is Team Insights?": "Team Insights is a project to create and manage...",
-            "What is Team Insights": "Team Insights is a project to create and manage...",
-            "Hello": "Hello, How can i Help you today?",
-            "Hi": "Hi, How can i Help you today?",
-            "": "",
-            "How do I create a project?": "To create a project, go to...",
-            "What roles are available?": "We have roles such as developer...",
-            // Add more questions and answers here
-        };
-
-        // Function to add a message to the chat
-        function addMessage(message, isUser) {
-            const messageElement = document.createElement('div');
-            messageElement.classList.add(isUser ? 'user-message' : 'bot-message', 'mb-2');
-            messageElement.textContent = message;
-            chatbotMessages.appendChild(messageElement);
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to the bottom
-        }
-
-        // Function to handle sending a message
-        function sendMessage() {
-            const message = chatbotInput.value.trim();
-            if (message) {
-                addMessage(message, true); // Add user message
-
-                // Find the answer
-                const answer = faq[message] || "Sorry, I don't have an answer to that question.";
-                setTimeout(() => {
-                    addMessage(answer, false); // Add bot answer after a short delay
-                }, 500);
-
-                chatbotInput.value = ''; // Clear the input
-            }
-        }
-
-        // Event listeners
-        chatbotToggle.addEventListener('click', () => {
-            chatbotWindow.classList.toggle('hidden');
-        });
-
-        chatbotClose.addEventListener('click', () => {
-            chatbotWindow.classList.add('hidden');
-        });
-
-        chatbotSend.addEventListener('click', sendMessage);
-
-        chatbotInput.addEventListener('keypress', (event) => {
-            if (event.key === 'Enter') {
-                sendMessage();
+                // 3. Donut Chart for Role Distribution
+                if (roleDistributionData && roleDistributionData.length > 0) {
+                    var donutChartCtx = document.getElementById('roleDonutChart').getContext('2d');
+                    var roleDonutChart = new Chart(donutChartCtx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: roleDistributionData.map(r => r.roleName),
+                            datasets: [{
+                                data: roleDistributionData.map(r => r.percentage),
+                                backgroundColor: [
+                                    'rgba(139, 0, 0, 0.8)',    // Project Manager (Dark Red)
+                                    'rgba(255, 255, 0, 0.8)',  // Backend Developer (Yellow)
+                                    'rgba(0, 128, 128, 0.8)',  // QA Engineer (Teal)
+                                    'rgba(34, 139, 34, 0.8)',  // Database Developer (Green)
+                                    'rgba(148, 0, 211, 0.8)',  // UI/UX Designer (Purple)
+                                    'rgba(255, 165, 0, 0.8)',  // DevOps Engineer (Orange)
+                                    'rgba(147, 112, 219, 0.8)',// Frontend Developer (Light Purple)
+                                    'rgba(255, 99, 71, 0.8)',  // Full Stack Developer (Tomato Red)
+                                    'rgba(255, 255, 153, 0.8)' // Team Leader (Light Yellow)
+                                ],
+                                borderColor: [
+                                    'rgba(139, 0, 0, 1)',
+                                    'rgba(255, 255, 0, 1)',
+                                    'rgba(0, 128, 128, 1)',
+                                    'rgba(34, 139, 34, 1)',
+                                    'rgba(148, 0, 211, 1)',
+                                    'rgba(255, 165, 0, 1)',
+                                    'rgba(147, 112, 219, 1)',
+                                    'rgba(255, 99, 71, 1)',
+                                    'rgba(255, 255, 153, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'right',
+                                    labels: {
+                                        boxWidth: 20,
+                                        padding: 15,
+                                        font: { size: 12 }
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Distribution of Roles Across Employees',
+                                    font: { size: 16 },
+                                    padding: { bottom: 20 }
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function (context) {
+                                            var label = context.label || '';
+                                            if (context.parsed !== null) {
+                                                label += ': ' + context.parsed.toFixed(1) + '%';
+                                            }
+                                            return label;
+                                        }
+                                    }
+                                }
+                            },
+                            layout: {
+                                padding: { right: 20 }
+                            }
+                        }
+                    });
+                }
             }
         });
     </script>
-</div>
+}

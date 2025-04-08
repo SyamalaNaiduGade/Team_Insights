@@ -1,0 +1,138 @@
+﻿@model List<TeamInsights.Models.Person>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container-fluid d-flex">
+
+    <!-- Main Content -->
+    <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
+        <h1>Managers</h1>
+
+        <div>
+@*             <table class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Hire Date</th>
+                        <th>Experience (Years)</th>
+                        <th>Manager</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var manager in Model)
+                    {
+                        <tr>
+                            <td>@manager.FirstName</td>
+                            <td>@manager.LastName</td>
+                            <td>@manager.Email</td>
+                            <td>@manager.HireDate.ToString("dd-MM-yyyy")</td>
+                            <td>@manager.Experience</td>
+                            <td>@(manager.Manager != null ? manager.Manager.FirstName + " " + manager.Manager.LastName : "-")</td>
+                            <td>
+                                <a href="@Url.Action("Edit", "People", new { id = manager.PersonID })">Edit</a> |
+                                <a href="@Url.Action("Details", "People", new { id = manager.PersonID })">Details</a> |
+                                <a href="@Url.Action("Delete", "People", new { id = manager.PersonID })" onclick="return confirm('Are you sure?')">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table> *@
+@*             <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="bg-white shadow-sm rounded-3 p-4">
+                        <h3 class="h5 fw-semibold mb-1">Projects</h3>
+                        <a href="@Url.Action("Index", "Projects")" class="btn from-right mt-3">View Projects</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="bg-white shadow-sm rounded-3 p-4">
+                        <h3 class="h5 fw-semibold mb-1">Roles</h3>
+                        <a href="@Url.Action("Index", "Roles")" class="btn from-right mt-3">View Roles</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="bg-white shadow-sm rounded-3 p-4">
+                        <h3 class="h5 fw-semibold mb-1">Contributions</h3>
+                        <a href="@Url.Action("Index", "Contributions")" class="btn from-right mt-3">View Contributions</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="bg-white shadow-sm rounded-3 p-4">
+                        <h3 class="h5 fw-semibold mb-1">Evaluations
+                        </h3>
+                        <a href="@Url.Action("Index", "Evaluations")" class="btn from-right mt-3">View Evaluations</a>
+                    </div>
+                </div>
+            </div> *@
+@*             <section class="mb-4">
+                <h2 class="h4 fw-bold mb-3">Quick Project Summary Cards</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="bg-white shadow-sm rounded-3 p-4">
+                            <h3 class="h5 fw-semibold mb-1">🧠 Predictive Planning</h3>
+                            <p><strong>Start:</strong> Jan 2024 – <strong>End:</strong> June 2024</p>
+                            <p><strong>Manager:</strong> Alice Johnson</p>
+                            <p><strong>Team:</strong> 👥 6 Employees</p>
+                            <div class="mt-2">
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-primary" style="width: 80%;"></div>
+                                </div>
+                                <p class="small text-muted mt-1">Progress: 80%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="bg-white shadow-sm rounded-3 p-4">
+                            <h3 class="h5 fw-semibold mb-1">🔍 Project Retrospective</h3>
+                            <p><strong>Start:</strong> March 2024 – <strong>End:</strong> Aug 2024</p>
+                            <p><strong>Manager:</strong> Bob Smith</p>
+                            <p><strong>Team:</strong> 👥 5 Employees</p>
+                            <div class="mt-2">
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" style="width: 40%;"></div>
+                                </div>
+                                <p class="small text-muted mt-1">Progress: 40%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> *@
+            <section class="mb-4">
+                <h2 class="h4 fw-bold mb-3">Managers Summary</h2>
+                <div class="row g-4">
+                    @foreach (var manager in Model)
+                    {
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="bg-white shadow-sm rounded-3 p-4">
+                                <h3 class="h5 fw-semibold mb-1">@manager.FirstName @manager.LastName</h3>
+                                <p><strong>Email:</strong> @manager.Email</p>
+                                <p><strong>Hire Date:</strong> @manager.HireDate.ToString("dd-MM-yyyy")</p>
+                                <p><strong>Experience:</strong> @manager.Experience years</p>
+                                <p><strong>Employees:</strong> ??? </p>
+                                <p><strong>Projects:</strong> ??? </p>
+                                <div class="mt-2 d-flex gap-2">
+                                    <a href="@Url.Action("Edit", "People", new { id = manager.PersonID })" class="btn btn-primary btn-sm">Edit</a>
+                                    <a href="@Url.Action("Details", "People", new { id = manager.PersonID })" class="btn btn-secondary btn-sm">Details</a>
+                                    <a href="@Url.Action("Delete", "People", new { id = manager.PersonID })" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+
+
+
+
+            <p>
+                <a href="@Url.Action("Index", "Home")" class="btn from-right mt-5">Back to Dashboard</a>
+            </p>
+        </div>
+    </main>
+</div>

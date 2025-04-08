@@ -5,59 +5,15 @@
 }
 
 <div class="container-fluid d-flex">
-    <!-- Sidebar -->
-    <aside class="sidebar d-flex flex-column p-3" style="width: 250px;">
-        @* <h2 class="logo text-center">Team Insights Management System</h2> *@
-        <video id="logo-video" autoplay playsinline muted>
-            <source src="~/Images/logo.mp4" type="video/mp4">
-        </video>
-        <nav>
-            <ul class="nav flex-column">
-                <li><a asp-controller="Home" asp-action="Index" class="nav-link active">Home</a></li>
-                <li><a asp-controller="People" asp-action="Index" class="nav-link">People</a></li>
-                <li><a asp-controller="Projects" asp-action="Index" class="nav-link">Projects</a></li>
-                <li><a asp-controller="Roles" asp-action="Index" class="nav-link">Roles</a></li>
-                <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li>
-                <li><a asp-controller="Evaluations" asp-action="Index" class="nav-link">Evaluations</a></li>
-                <li><a asp-controller="Performances" asp-action="Index" class="nav-link">Performance Metrics</a></li>
-            </ul>
-        </nav>
-        <div class="user-profile mt-auto">
-            <button class="profile-btn d-flex align-items-center border p-2 rounded-3 shadow-sm w-100">
-                <img src="images/uifaces-popular-image.jpg" alt="User Avatar" class="avatar rounded-circle me-3" style="width: 40px; height: 40px;">
-                <div>
-                    <p class="m-0"><strong>Team Insights Admin</strong></p>
-                    <span class="small">teaminsightsadmin@mail.com</span>
-
-                </div>
-            </button>
-            <div class="dropdown-menu mt-2">
-                <a href="#" class="dropdown-item">Profile</a>
-                <a href="#" class="dropdown-item">Settings</a>
-                <a asp-controller="Splash" asp-action="Index" class="dropdown-item">Logout</a>
-            </div>
-        </div>
-    </aside>
 
     <!-- Main Content -->
     <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
         <h1>Performance</h1>
-        @* <div class="tabs">
-        <a href="#" class="tab-link">Account</a>
-        <a href="#" class="tab-link active">Appearance</a>
-        <a href="#" class="tab-link">Profile</a>
-        <a href="#" class="tab-link">Security</a>
-        <a href="#" class="tab-link">Notifications</a>
-        <a href="#" class="tab-link">Billing</a>
-        <a href="#" class="tab-link">Integrations</a>
-        </div> *@
+
         <div>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.EmployeeRole.Employee.FirstName)
-                        </th>
                         <th>
                             @Html.DisplayNameFor(model => model.Manager)
                         </th>
@@ -87,22 +43,19 @@
                     {
                         <tr>
                             <td>
-                                @Html.DisplayFor(modelItem => item.EmployeeRole.Employee.FirstName)
-                            </td>
-                            <td>
                                 @Html.DisplayFor(modelItem => item.Manager.FirstName)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.EmployeeRole.Role.RoleName)
+                                @Html.DisplayFor(modelItem => item.EmployeeRole.EmployeeRoleID)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Project.ProjectName)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Contribution.Description)
+                                @Html.DisplayFor(modelItem => item.Contribution.ContributionID)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Evaluation.Comments)
+                                @Html.DisplayFor(modelItem => item.Evaluation.EvaluationID)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.HoursWorked)
@@ -125,4 +78,3 @@
         </div>
     </main>
 </div>
-

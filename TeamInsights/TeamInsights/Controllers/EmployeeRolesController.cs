@@ -22,6 +22,8 @@ namespace TeamInsights.Controllers
         // GET: EmployeeRoles
         public async Task<IActionResult> Index()
         {
+            var userName = User.Identity.Name; // This gets the username of the logged-in user
+            ViewData["UserName"] = userName;
             var teamInsightsContext = _context.EmployeeRoles.Include(e => e.Employee).Include(e => e.Role);
             return View(await teamInsightsContext.ToListAsync());
         }

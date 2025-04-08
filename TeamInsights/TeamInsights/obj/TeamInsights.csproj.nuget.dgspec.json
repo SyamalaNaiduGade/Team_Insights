@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\syama\\OneDrive\\Desktop\\Sprint-3 team Insights\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj": {}
+    "C:\\Users\\syama\\OneDrive\\Desktop\\sprint_3_integration\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj": {}
   },
   "projects": {
-    "C:\\Users\\syama\\OneDrive\\Desktop\\Sprint-3 team Insights\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj": {
+    "C:\\Users\\syama\\OneDrive\\Desktop\\sprint_3_integration\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\syama\\OneDrive\\Desktop\\Sprint-3 team Insights\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
+        "projectUniqueName": "C:\\Users\\syama\\OneDrive\\Desktop\\sprint_3_integration\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
         "projectName": "TeamInsights",
-        "projectPath": "C:\\Users\\syama\\OneDrive\\Desktop\\Sprint-3 team Insights\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
+        "projectPath": "C:\\Users\\syama\\OneDrive\\Desktop\\sprint_3_integration\\Team_Insights\\TeamInsights\\TeamInsights\\TeamInsights.csproj",
         "packagesPath": "C:\\Users\\syama\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\syama\\OneDrive\\Desktop\\Sprint-3 team Insights\\Team_Insights\\TeamInsights\\TeamInsights\\obj\\",
+        "outputPath": "C:\\Users\\syama\\OneDrive\\Desktop\\sprint_3_integration\\Team_Insights\\TeamInsights\\TeamInsights\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
