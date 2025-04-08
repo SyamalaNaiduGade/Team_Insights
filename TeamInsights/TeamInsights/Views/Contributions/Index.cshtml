@@ -5,39 +5,7 @@
 }
 
 <div class="container-fluid d-flex">
-    <!-- Sidebar -->
-    <aside class="sidebar d-flex flex-column p-3" style="width: 250px;">
-        @* <h2 class="logo text-center">Team Insights Management System</h2> *@
-        <video id="logo-video" autoplay playsinline muted>
-            <source src="~/Images/logo.mp4" type="video/mp4">
-        </video>
-        <nav>
-            <ul class="nav flex-column">
-                <li><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
-                <li><a asp-controller="People" asp-action="Index" class="nav-link">People</a></li>
-                <li><a asp-controller="Projects" asp-action="Index" class="nav-link active">Projects</a></li>
-                <li><a asp-controller="Roles" asp-action="Index" class="nav-link">Roles</a></li>
-                <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li>
-                <li><a asp-controller="Evaluations" asp-action="Index" class="nav-link">Evaluations</a></li>
-                <li><a asp-controller="Performances" asp-action="Index" class="nav-link">Performance Metrics</a></li>
-                <li><a asp-controller="EmployeeSkills" asp-action="SkillCertificationMatrix" class="nav-link">Performnace Matrix</a></li>
-            </ul>
-        </nav>
-        <div class="user-profile mt-auto">
-            <button class="profile-btn d-flex align-items-center border p-2 rounded-3 shadow-sm w-100">
-                <img src="images/uifaces-popular-image.jpg" alt="User Avatar" class="avatar rounded-circle me-3" style="width: 40px; height: 40px;">
-                <div class="profile-btn-text">
-                    <p class="m-0"><strong>Admin@* @User.Identity?.Name *@</strong></p>
-                    <span class="small">teaminsightsadmin@mail.com</span>
-                </div>
-            </button>
-            <div class="dropdown-menu mt-2">
-                <a href="#" class="dropdown-item">Profile</a>
-                <a href="#" class="dropdown-item">Settings</a>
-                <a href="#" class="dropdown-item">Logout</a>
-            </div>
-        </div>
-    </aside>
+    
     <!-- Main Content -->
     <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
         <h1>Contributions</h1>

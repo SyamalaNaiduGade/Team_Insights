@@ -22,6 +22,8 @@ namespace TeamInsights.Controllers
         // GET: Evaluations
         public async Task<IActionResult> Index()
         {
+            var userName = User.Identity.Name; // This gets the username of the logged-in user
+            ViewData["UserName"] = userName;
             return View(await _context.Evaluations.ToListAsync());
         }
 

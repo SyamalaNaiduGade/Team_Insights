@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamInsights")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79463990c0df83c1d7a74f5fb6ddfee6871d0cd8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d735c0435e95e8c1cc8eaf82cf8cff6c163d094")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamInsights")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamInsights")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

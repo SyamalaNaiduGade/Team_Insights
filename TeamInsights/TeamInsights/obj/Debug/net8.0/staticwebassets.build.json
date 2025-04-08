@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eY4YKEnOVBtMpx6TZ2bY2/ZKWo6KUnpi9KRLoenuGQw=",
+  "Hash": "l0gefwXLDiuaYg4HuW4HhhrrGlX+SlrusnUnXGWfyfg=",
   "Source": "TeamInsights",
   "BasePath": "_content/TeamInsights",
   "Mode": "Default",
@@ -1364,6 +1364,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\connections2.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\syama\\OneDrive\\Desktop\\sprint_3_integration\\Team_Insights\\TeamInsights\\TeamInsights\\wwwroot\\Images\\default-avatar.jpg",
+      "SourceId": "TeamInsights",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\syama\\OneDrive\\Desktop\\sprint_3_integration\\Team_Insights\\TeamInsights\\TeamInsights\\wwwroot\\",
+      "BasePath": "_content/TeamInsights",
+      "RelativePath": "Images/default-avatar.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\default-avatar.jpg"
     },
     {
       "Identity": "C:\\Users\\syama\\OneDrive\\Desktop\\sprint_3_integration\\Team_Insights\\TeamInsights\\TeamInsights\\wwwroot\\Images\\logo.mp4",

@@ -20,6 +20,8 @@ namespace TeamInsights.Controllers
         }
         public async Task<IActionResult> Index(string? roleFilter)
         {
+            var userName = User.Identity.Name; // This gets the username of the logged-in user
+            ViewData["UserName"] = userName;
             //for cards 
             var managerCount = await _context.People
                 .Where(p => _context.People.Any(e => e.ManagerID == p.PersonID))
