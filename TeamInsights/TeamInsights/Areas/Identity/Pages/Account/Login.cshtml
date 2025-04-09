@@ -19,8 +19,8 @@
 <body class="dark-theme">
 
     <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="card shadow-lg p-4 login-card">
-            <h2 class="text-center mb-3 text-dark">Sign In</h2>
+        <div class="card shadow-lg p-4 login-card" style="width: 100%; max-width: 400px; border-radius: 20px; background-color: rgba(249, 249, 249, 0.9);">
+            <h2 class="text-center mb-3 text-primary">Sign In</h2>
 
             <form id="account" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger text-center mb-3" role="alert"></div>
@@ -53,6 +53,9 @@
                     <p>
                         <a asp-page="./ForgotPassword" class="text-decoration-none text-primary link-hover">Forgot your password?</a>
                     </p>
+                    <p>
+                        <a asp-controller="Splash" asp-action="Index" class="text-decoration-none text-primary link-hover">Go Back</a>
+                    </p>
                 </div>
             </form>
         </div>
@@ -66,55 +69,115 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
+    <video autoplay muted loop plays-inline class="background-clip">
+        <source src="~/Images/connections2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
     <style>
-        /* Dark Theme Background */
-        .dark-theme {
-            background-color: #000;
-            color: #fff;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", serif;
         }
 
-        /* White Login Card */
-        .login-card {
-            background: #fff;
-            border-radius: 10px;
+
+        html {
+            font-size: 14px;
+        }
+
+        /* Background Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", serif;
+        }
+
+        .section {
             width: 100%;
-            max-width: 400px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            height: 100vh;
+            /* background-color: rgba(0,0,0,.9);*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Input Fields */
+        .background-clip {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(40%);
+        }
+
+
+
+        /* Input Field Styling */
         .custom-input {
-            background: #fff;
             border: 2px solid #ddd;
-            color: #333;
-            border-radius: 8px;
-            transition: 0.3s;
-            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
             .custom-input:focus {
-                border-color: #007BFF;
+                border-color: #007bff;
                 box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+                outline: none;
             }
 
-        /* Button */
+            .custom-input:hover {
+                border-color: #0056b3;
+            }
+
+        /* Button Styling */
         .custom-button {
-            background: linear-gradient(to right, #007BFF, #0056B3);
-            border: none;
+            background: linear-gradient(90deg, #007bff, #0056b3);
             color: white;
-            font-weight: bold;
-            transition: 0.3s;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
         }
 
             .custom-button:hover {
-                background: linear-gradient(to right, #0056B3, #003F7F);
+                background: linear-gradient(90deg, #0056b3, #003a80);
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+                transform: translateY(-2px);
             }
 
-        /* Links */
-        .link-hover:hover {
-            text-decoration: underline;
-            color: #007BFF;
+            .custom-button:active {
+                transform: translateY(2px);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+        /* Form Card Styling */
+        .card {
+            background: #ffffff;
+            border: none;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
+
+        /* Link Hover Styles */
+        .link-hover {
+            transition: all 0.3s ease;
+            color: #007bff !important; /* Default primary blue color */
+        }
+
+            .link-hover:hover {
+                color: #0056b3 !important; /* Darker blue */
+                text-decoration: underline !important; /* Underline effect */
+                transform: scale(1.05) !important; /* Slight zoom effect */
+            }
     </style>
 
 </body>

@@ -16,18 +16,34 @@
             <section class="mb-4">
                 <h2 class="h4 fw-bold mb-3">Manager & Leadership Insights</h2>
                 <div class="row g-4">
+                    @* <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="bg-white shadow-sm rounded-3 p-4 h-card">
+                            <h3 class="h5 fw-semibold mb-1">Total Managers</h3>
+                            <p><strong>@ViewBag.ManagerCount</strong></p>
+                            <div class="d-flex justify-content-center">
+                                <a href="@Url.Action("Managers", "Home")" class="btn">View Managers</a>
+                            </div>
+                        </div>
+                    </div> *@
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="bg-white shadow-sm rounded-3 p-4">
-                            <h3 class="h5 fw-semibold mb-1">Managers</h3>
-                            <p><strong>Total: @ViewBag.ManagerCount</strong></p>
-                            <a href="@Url.Action("Managers", "Home")" class="btn from-right mt-3">View Managers</a>
+                        <div class="bg-white shadow-sm rounded-3 p-4 h-card">
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <h3 class="h5 fw-semibold mb-0">Total Managers</h3>
+                            </div>
+                            <p><strong>@ViewBag.ManagerCount</strong></p>
+                            <div class="d-flex justify-content-center">
+                                <a href="@Url.Action("Managers", "Home")" class="btn from-right btn-home-card">View Managers</a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="bg-white shadow-sm rounded-3 p-4">
-                            <h3 class="h5 fw-semibold mb-1">Employees</h3>
-                            <p><strong>Total: @ViewBag.EmployeeCount</strong></p>
-                            <a href="@Url.Action("Employees", "Home")" class="btn from-right mt-3">View Employees</a>
+                        <div class="bg-white shadow-sm rounded-3 p-4 h-card">
+                            <h3 class="h5 fw-semibold mb-1">Total Employees</h3>
+                            <p><strong>@ViewBag.EmployeeCount</strong></p>
+                           
+                            <div class="d-flex justify-content-center">
+                                <a href="@Url.Action("Employees", "Home")" class="btn from-right btn-home-card">View Employees</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,21 +98,26 @@
                         <canvas id="topPerformersChart"></canvas>
                     </div>
                     <!-- 3. Pie Chart for Performance Breakdown -->
-                    <div class="mt-4">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div style="flex: 1; max-width: 400px;">
-                                <canvas id="performanceBreakdownChart" style="max-height: 300px;"></canvas>
+                    <div class="d-flex flex-wrap justify-content-center gap-5 mt-4">
+                        <!-- Performance Breakdown Chart -->
+                        <div class="col-12 col-sm-6 col-lg-6">
+                            <div class="d-flex justify-content-center align-items-center" style="overflow: visible;">
+                                <div style="flex: 1;  max-height: 350px;">
+                                    <canvas id="performanceBreakdownChart" style="width: auto;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Donut Chart for Role Distribution -->
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="d-flex justify-content-lg-evenly align-items-center" style="overflow: visible;">
+                                <div style="flex: 1; /* max-height: 350px; */">
+                                    <canvas id="roleDonutChart" style="width: auto;"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- 4. Donut Chart for Role Distribution -->
-                    <div class="mt-4">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div style="flex: 1; max-width: 400px;">
-                                <canvas id="roleDonutChart" style="max-height: 300px;"></canvas>
-                            </div>
-                        </div>
-                    </div>
+
                 }
                 else
                 {
@@ -301,11 +322,11 @@
                     return performer.performanceScore;
                 });
                 var darkBarColors = [
-                    'rgba(176, 47, 21, 0.8)',
-                    'rgba(242, 211, 7, 0.8)',
-                    'rgba(21, 87, 115, 0.8)',
-                    'rgba(113, 115, 21, 0.8)',
-                    'rgba(163, 20, 91, 0.8)'
+                    'rgba(251, 80, 18, 0.8)',
+                    'rgba(1, 253, 246, 0.8)',
+                    'rgba(203, 186, 237, 0.8)',
+                    'rgba(233, 223, 0, 0.8)',
+                    'rgba(3, 252, 186, 0.8)'
                 ];
                 var barChartBackgroundColors = barChartScores.map(function (score, index) {
                     return darkBarColors[index % darkBarColors.length];
@@ -327,7 +348,7 @@
                     options: {
                         scales: {
                             y: { beginAtZero: true, title: { display: true, text: 'Performance Score' } },
-                            x: { title: { display: true, text: 'Employee Name' } }
+                            x: { title: { display: true, text: 'Employee Name'} }
                         },
                         plugins: {
                             legend: { display: false },
@@ -343,16 +364,16 @@
                         labels: ['Evaluation Score (50%)', 'Project Contributions (30%)', 'Hours Worked (20%)'],
                         datasets: [{
                             data: [50, 30, 20],
-                            backgroundColor: [
-                                'rgba(139, 0, 0, 0.8)',  // Dark Red (Evaluation Score)
-                                'rgba(255, 255, 0, 0.8)', // Yellow (Project Contributions)
-                                'rgba(0, 128, 128, 0.8)' // Teal (Hours Worked)
-                            ],
-                            borderColor: [
-                                'rgba(139, 0, 0, 1)',
-                                'rgba(255, 255, 0, 1)',
-                                'rgba(0, 128, 128, 1)'
-                            ],
+                                    backgroundColor: [
+            'rgba(255, 99, 132, 0.8)',   // Rose Red (Evaluation Score)
+            'rgba(100, 221, 23, 0.8)',   // Spring Green (Project Contributions)
+            'rgba(0, 188, 212, 0.8)'     // Aqua Blue (Hours Worked)
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(100, 221, 23, 1)',
+            'rgba(0, 188, 212, 1)'
+        ],
                             borderWidth: 1
                         }]
                     },
@@ -360,7 +381,7 @@
                         responsive: true,
                         plugins: {
                             legend: {
-                                position: 'right',
+                                position: 'bottom',
                                 labels: {
                                     boxWidth: 20,
                                     padding: 15,
@@ -399,36 +420,34 @@
                             labels: roleDistributionData.map(r => r.roleName),
                             datasets: [{
                                 data: roleDistributionData.map(r => r.percentage),
-                                backgroundColor: [
-                                    'rgba(139, 0, 0, 0.8)',    // Project Manager (Dark Red)
-                                    'rgba(255, 255, 0, 0.8)',  // Backend Developer (Yellow)
-                                    'rgba(0, 128, 128, 0.8)',  // QA Engineer (Teal)
-                                    'rgba(34, 139, 34, 0.8)',  // Database Developer (Green)
-                                    'rgba(148, 0, 211, 0.8)',  // UI/UX Designer (Purple)
-                                    'rgba(255, 165, 0, 0.8)',  // DevOps Engineer (Orange)
-                                    'rgba(147, 112, 219, 0.8)',// Frontend Developer (Light Purple)
-                                    'rgba(255, 99, 71, 0.8)',  // Full Stack Developer (Tomato Red)
-                                    'rgba(255, 255, 153, 0.8)' // Team Leader (Light Yellow)
-                                ],
-                                borderColor: [
-                                    'rgba(139, 0, 0, 1)',
-                                    'rgba(255, 255, 0, 1)',
-                                    'rgba(0, 128, 128, 1)',
-                                    'rgba(34, 139, 34, 1)',
-                                    'rgba(148, 0, 211, 1)',
-                                    'rgba(255, 165, 0, 1)',
-                                    'rgba(147, 112, 219, 1)',
-                                    'rgba(255, 99, 71, 1)',
-                                    'rgba(255, 255, 153, 1)'
-                                ],
-                                borderWidth: 1
+                backgroundColor: [
+            'rgba(255, 99, 132, 0.8)',   // Project Manager - Rose Red
+            'rgba(54, 162, 235, 0.8)',   // Backend Developer - Sky Blue
+            'rgba(255, 206, 86, 0.8)',   // QA Engineer - Sunflower Yellow
+            'rgba(75, 192, 192, 0.8)',   // Database Developer - Teal
+            'rgba(153, 102, 255, 0.8)',  // UI/UX Designer - Lavender Purple
+            'rgba(255, 159, 64, 0.8)',   // DevOps Engineer - Tangerine
+            'rgba(255, 140, 185, 0.8)',  // Frontend Developer - Petal Pink
+            'rgba(100, 221, 187, 0.8)'   // Full Stack Developer - Seafoam Green
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(255, 140, 185, 1)',
+            'rgba(100, 221, 187, 1)'
+        ],
+        borderWidth: 1
                             }]
                         },
                         options: {
                             responsive: true,
                             plugins: {
                                 legend: {
-                                    position: 'right',
+                                    position: 'bottom',
                                     labels: {
                                         boxWidth: 20,
                                         padding: 15,
