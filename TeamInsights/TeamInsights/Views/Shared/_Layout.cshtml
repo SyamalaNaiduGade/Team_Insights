@@ -16,15 +16,15 @@
         <!-- Sidebar -->
         <aside class="sidebar d-flex flex-column p-3" style="width: 250px; height: 100vh; position: fixed; background-color: #f8f9fa;">
             <video id="logo-video" autoplay playsinline muted style="max-width: 100%; margin-bottom: 20px;">
-                <source src="~/Images/logo.mp4" type="video/mp4">
+                <source src="~/Images/logo2.mp4" type="video/mp4">
             </video>
             <nav>
                 <ul class="nav flex-column">
                     <li><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
                     <li><a asp-controller="People" asp-action="Index" class="nav-link">People</a></li>
                     <li><a asp-controller="Projects" asp-action="Index" class="nav-link">Projects</a></li>
-                    <li><a asp-controller="Roles" asp-action="Index" class="nav-link">Roles</a></li>
-                    <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li>
+                    @* <li><a asp-controller="Roles" asp-action="Index" class="nav-link">Roles</a></li>
+                    <li><a asp-controller="Contributions" asp-action="Index" class="nav-link">Contributions</a></li> *@
                     <li><a asp-controller="Evaluations" asp-action="Index" class="nav-link">Evaluations</a></li>
                     <li><a asp-controller="Performances" asp-action="Index" class="nav-link">Performance Metrics</a></li>
                     <li><a asp-controller="EmployeeSkills" asp-action="SkillCertificationMatrix" class="nav-link">Performance Matrix</a></li>
@@ -56,7 +56,7 @@
     </div>
 
     <footer class="text-muted text-center">
-        &copy; 2025 - Team Insights - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        &copy; 2025 - Team Insights - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> - 
         <a asp-area="" asp-controller="Home" asp-action="Aboutus">About Us</a>
     </footer>
 

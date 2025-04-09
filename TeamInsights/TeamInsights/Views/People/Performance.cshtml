@@ -14,8 +14,8 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- Google Charts Loader -->
     <style>
         body {
-            font-family: sans-serif;
-            margin: 20px;
+            font-family: "Roboto";
+
         }
         table {
             width: 100%;
@@ -88,6 +88,8 @@
     </script>
 </head>
 <body>
+    <div class="container-fluid d-flex">
+        <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
 
 @*     <h1>Employee Performance Report</h1>
  *@
@@ -180,6 +182,7 @@
             <a asp-action="Index" class="btn from-right">Back</a>
         </p>
     </div>
-
+    </main>
+    </div>
 </body>
 </html>
