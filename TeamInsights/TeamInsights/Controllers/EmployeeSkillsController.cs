@@ -179,13 +179,13 @@ namespace TeamInsights.Controllers
                 .Include(p => p.EmployeeRoles)
                     .ThenInclude(er => er.Performances)
                         .ThenInclude(pf => pf.Evaluation)
-                .Include(p => p.EmployeeRoles) // Include Performances for projects
+                .Include(p => p.EmployeeRoles)
                     .ThenInclude(er => er.Performances)
                         .ThenInclude(pf => pf.Project)
                 .Select(emp => new SkillCertificationMatrixViewModel
                 {
                     EmployeeID = emp.PersonID,
-                    EmployeeName = emp.FirstName,
+                    EmployeeName = emp.FirstName + " " + emp.LastName,
                     Skills = emp.EmployeeSkills.Select(es => new SkillEntry
                     {
                         SkillName = es.Skill.SkillName,
@@ -218,7 +218,7 @@ namespace TeamInsights.Controllers
                         .SelectMany(er => er.Performances)
                         .Where(pf => pf.ProjectID != null)
                         .Select(pf => pf.Project.ProjectName)
-                        .Distinct() // Avoid duplicate project names
+                        .Distinct()
                         .ToList(),
                     ContributionsCount = emp.EmployeeRoles
                         .SelectMany(er => er.Performances)
@@ -243,7 +243,7 @@ namespace TeamInsights.Controllers
                                                  e.Skills.Any(s => s.SkillName.Contains(searchTerm)) ||
                                                  e.Certifications.Any(c => c.CertificationName.Contains(searchTerm)) ||
                                                  e.Roles.Any(r => r.RoleName.Contains(searchTerm)) ||
-                                                 e.ProjectNames.Any(pn => pn.Contains(searchTerm))); // Include project names in search
+                                                 e.ProjectNames.Any(pn => pn.Contains(searchTerm)));
             }
             // Sorting
             employees = sortBy switch
@@ -256,8 +256,12 @@ namespace TeamInsights.Controllers
                     .OrderByDescending(e => e.AverageEvaluationScore.HasValue ? e.AverageEvaluationScore.Value : double.MinValue),
                 _ => employees
             };
+            // Pass the search term and sortBy to the view
+            ViewBag.SearchTerm = searchTerm;
+            ViewBag.SortBy = sortBy;
             return View(employees.ToList());
         }
+
         private bool EmployeeSkillExists(int id)
         {
             return _context.EmployeeSkills.Any(e => e.EmployeeSkillID == id);
