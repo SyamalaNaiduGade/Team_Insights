@@ -33,76 +33,7 @@ namespace TeamInsights.Controllers
             ViewBag.EmployeeCount = employeeCount;
 
 
-            //const double MaxPossibleAvgEvaluationScore = 100.0;
-            //const int MaxPossibleProjects = 20;
-            //const int MaxPossibleSkills = 50;
-            //const double MaxPossibleHours = 2080.0;
-
-            //var employees = await _context.People
-            //    .Include(p => p.Performances)!.ThenInclude(perf => perf.Project)
-            //    .Include(p => p.Performances)!.ThenInclude(perf => perf.Evaluation)
-            //    .Include(p => p.EmployeeSkills)
-            //    .Include(p => p.EmployeeRoles)!.ThenInclude(er => er.Role)
-            //    .Where(p => p.Performances != null && p.Performances.Any())
-            //    .ToListAsync();
-
-            //var employeeScores = new List<TopPerformerViewModel>();
-
-            //foreach (var employee in employees)
-            //{
-            //    var roleNames = employee.EmployeeRoles?
-            //                        .Select(r => r.Role?.RoleName)
-            //                        .Where(r => !string.IsNullOrEmpty(r))
-            //                        .ToList() ?? new List<string>();
-
-            //    // Skip if no roles or does not match filter
-            //    if (!roleNames.Any()) continue;
-            //    if (!string.IsNullOrEmpty(roleFilter) && !roleNames.Contains(roleFilter)) continue;
-
-            //    var evals = employee.Performances!.Select(p => p.Evaluation?.Score).Where(s => s.HasValue).ToList();
-            //    double avgEvalScore = evals.Any() ? evals.Average() ?? 0 : 0;
-            //    double normalizedEvalScore = (MaxPossibleAvgEvaluationScore > 0) ? (avgEvalScore / MaxPossibleAvgEvaluationScore) * 100 : 0;
-
-            //    int projectCount = employee.Performances.Select(p => p.ProjectID).Distinct().Count();
-            //    double normalizedProjectScore = (MaxPossibleProjects > 0) ? ((double)projectCount / MaxPossibleProjects) * 100 : 0;
-
-            //    int skillCount = employee.EmployeeSkills?.Count ?? 0;
-            //    double normalizedSkillScore = (MaxPossibleSkills > 0) ? ((double)skillCount / MaxPossibleSkills) * 100 : 0;
-
-            //    double totalHours = employee.Performances.Sum(p => p.HoursWorked ?? 0);
-            //    double normalizedHoursScore = (MaxPossibleHours > 0) ? (totalHours / MaxPossibleHours) * 100 : 0;
-
-            //    double performanceScore = (normalizedProjectScore * 0.40) +
-            //                              (normalizedEvalScore * 0.30) +
-            //                              (normalizedSkillScore * 0.20) +
-            //                              (normalizedHoursScore * 0.10);
-            //    performanceScore = Math.Min(performanceScore, 100.0);
-
-            //    employeeScores.Add(new TopPerformerViewModel
-            //    {
-            //        EmployeeName = $"{employee.FirstName} {employee.LastName}",
-            //        RoleNames = roleNames,
-            //        PerformanceScore = performanceScore
-            //    });
-            //}
-
-            //var topPerformers = employeeScores
-            //                    .OrderByDescending(e => e.PerformanceScore)
-            //                    .Take(5)
-            //                    .Select((e, index) => new TopPerformerViewModel
-            //                    {
-            //                        Rank = index + 1,
-            //                        EmployeeName = e.EmployeeName,
-            //                        RoleNames = e.RoleNames,
-            //                        PerformanceScore = e.PerformanceScore
-            //                    })
-            //                    .ToList();
-
-            //// Get unique role list for dropdown
-            //var allRoles = await _context.Roles.Select(r => r.RoleName).Distinct().ToListAsync();
-            //ViewData["Roles"] = new SelectList(allRoles);
-            //ViewData["TopPerformers"] = topPerformers;
-            //ViewData["SelectedRole"] = roleFilter;
+           
             // Get Top 5 Performers
             var topPerformers = await GetTopPerformersAsync();
             ViewBag.TopPerformers = topPerformers;
@@ -185,6 +116,7 @@ namespace TeamInsights.Controllers
                 .Include(p => p.Manager)
                 .Where(p => p.ManagerID != null)
                 .ToListAsync(); return View(employees);
+
         }
         public IActionResult Aboutus()
         {

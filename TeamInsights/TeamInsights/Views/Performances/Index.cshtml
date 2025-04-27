@@ -5,7 +5,6 @@
 }
 
 <div class="container-fluid d-flex">
-
     <!-- Main Content -->
     <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
         <h1>Performance</h1>
@@ -15,7 +14,8 @@
                 <thead>
                     <tr>
                         <th>
-                            @Html.DisplayNameFor(model => model.Manager)
+@*                             @Html.DisplayNameFor(model => model.EmployeeRole.Employee.FirstName)
+ *@                         Name
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.EmployeeRole)
@@ -27,7 +27,7 @@
                             @Html.DisplayNameFor(model => model.Contribution)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Evaluation)
+                            Evaluation Score
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.HoursWorked)
@@ -43,19 +43,19 @@
                     {
                         <tr>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Manager.FirstName)
+                                @Html.DisplayFor(modelItem => item.EmployeeRole.Employee.FirstName) @Html.DisplayFor(modelItem => item.EmployeeRole.Employee.LastName)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.EmployeeRole.EmployeeRoleID)
+                                @Html.DisplayFor(modelItem => item.EmployeeRole.Role.RoleName)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Project.ProjectName)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Contribution.ContributionID)
+                                @Html.DisplayFor(modelItem => item.Contribution.Description)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Evaluation.EvaluationID)
+                                @Html.DisplayFor(modelItem => item.Evaluation.Score)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.HoursWorked)
@@ -78,3 +78,4 @@
         </div>
     </main>
 </div>
+
