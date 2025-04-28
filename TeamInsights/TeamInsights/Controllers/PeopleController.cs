@@ -210,5 +210,28 @@ namespace TeamInsights.Controllers
         {
             return _context.People.Any(e => e.PersonID == id);
         }
+
+
+
+        public async Task<IActionResult> Profile(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                return NotFound();
+            }
+
+            var person = await _context.People
+                .Include(p => p.EmployeeSkills).ThenInclude(s => s.Skill)
+                .Include(p => p.EmployeeRoles).ThenInclude(r => r.Role)
+                .Include(p => p.EmployeeCertifications).ThenInclude(c => c.Certification)
+                .FirstOrDefaultAsync(p => p.Email == email);
+
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            return View(person);
+        }
     }
 }

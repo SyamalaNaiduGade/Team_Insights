@@ -19,12 +19,31 @@ namespace TeamInsights.Controllers
             _context = context;
         }
 
+        //// GET: Performances
+        //public async Task<IActionResult> Index()
+        //{
+        //    var userName = User.Identity.Name; // This gets the username of the logged-in user
+        //    ViewData["UserName"] = userName;
+        //    var teamInsightsContext = _context.Performances.Include(p => p.Contribution).Include(p => p.EmployeeRole).ThenInclude(er=>er.Role).Include(p => p.Evaluation).Include(p => p.Manager).Include(p => p.Project);
+        //    return View(await teamInsightsContext.ToListAsync());
+        //}
         // GET: Performances
         public async Task<IActionResult> Index()
         {
             var userName = User.Identity.Name; // This gets the username of the logged-in user
             ViewData["UserName"] = userName;
-            var teamInsightsContext = _context.Performances.Include(p => p.Contribution).Include(p => p.EmployeeRole).Include(p => p.Evaluation).Include(p => p.Manager).Include(p => p.Project);
+
+            var teamInsightsContext = _context.Performances
+                .Include(p => p.Contribution)
+                .Include(p => p.EmployeeRole)                     // Include EmployeeRole
+                    .ThenInclude(er => er.Role)                    // Include Role within EmployeeRole
+                .Include(p => p.EmployeeRole.Employee)             // Include Employee (Person) through EmployeeRole
+                .Include(p => p.Evaluation)
+                .Include(p => p.Manager)
+                .Include(p => p.Project);
+
+
+
             return View(await teamInsightsContext.ToListAsync());
         }
 
@@ -39,6 +58,8 @@ namespace TeamInsights.Controllers
             var performance = await _context.Performances
                 .Include(p => p.Contribution)
                 .Include(p => p.EmployeeRole)
+                 .ThenInclude(er => er.Role)
+                  .Include(p => p.EmployeeRole.Employee)
                 .Include(p => p.Evaluation)
                 .Include(p => p.Manager)
                 .Include(p => p.Project)

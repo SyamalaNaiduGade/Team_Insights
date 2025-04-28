@@ -164,6 +164,103 @@ namespace TeamInsights.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        //public IActionResult SkillCertificationMatrix(string searchTerm, string sortBy)
+        //{
+        //    var employees = _context.People
+        //        .Include(p => p.EmployeeSkills)
+        //            .ThenInclude(es => es.Skill)
+        //        .Include(p => p.EmployeeCertifications)
+        //            .ThenInclude(ec => ec.Certification)
+        //        .Include(p => p.EmployeeRoles)
+        //            .ThenInclude(er => er.Role)
+        //        .Include(p => p.EmployeeRoles)
+        //            .ThenInclude(er => er.Performances)
+        //                .ThenInclude(pf => pf.Contribution)
+        //        .Include(p => p.EmployeeRoles)
+        //            .ThenInclude(er => er.Performances)
+        //                .ThenInclude(pf => pf.Evaluation)
+        //        .Include(p => p.EmployeeRoles) // Include Performances for projects
+        //            .ThenInclude(er => er.Performances)
+        //                .ThenInclude(pf => pf.Project)
+        //        .Select(emp => new SkillCertificationMatrixViewModel
+        //        {
+        //            EmployeeID = emp.PersonID,
+        //            EmployeeName = emp.FirstName,
+        //            Skills = emp.EmployeeSkills.Select(es => new SkillEntry
+        //            {
+        //                SkillName = es.Skill.SkillName,
+        //                SkillLevel = es.Skill.SkillLevel,
+        //                AcquiredDate = es.AcquiredDate
+        //            }).ToList(),
+        //            Certifications = emp.EmployeeCertifications.Select(ec => new CertificationEntry
+        //            {
+        //                CertificationName = ec.Certification.CertificationName,
+        //                IssuedDate = ec.IssuedDate
+        //            }).ToList(),
+        //            Roles = emp.EmployeeRoles.Select(er => new RoleEntry
+        //            {
+        //                RoleName = er.Role.RoleName,
+        //                AssignedDate = null, // Adjust if you add this field to EmployeeRole
+        //                RoleContributionsCount = er.Performances
+        //                    .Count(pf => pf.ContributionID != null),
+        //                RoleContributionsDescriptions = er.Performances
+        //                    .Where(pf => pf.ContributionID != null)
+        //                    .Select(pf => pf.Contribution.Description)
+        //                    .Where(desc => !string.IsNullOrEmpty(desc))
+        //                    .ToList(),
+        //                AverageEvaluationScore = er.Performances
+        //                    .Where(pf => pf.EvaluationID != null)
+        //                    .Select(pf => pf.Evaluation.Score)
+        //                    .DefaultIfEmpty()
+        //                    .Average()
+        //            }).ToList(),
+        //            ProjectNames = emp.EmployeeRoles
+        //                .SelectMany(er => er.Performances)
+        //                .Where(pf => pf.ProjectID != null)
+        //                .Select(pf => pf.Project.ProjectName)
+        //                .Distinct() // Avoid duplicate project names
+        //                .ToList(),
+        //            ContributionsCount = emp.EmployeeRoles
+        //                .SelectMany(er => er.Performances)
+        //                .Count(pf => pf.ContributionID != null),
+        //            ContributionsDescriptions = emp.EmployeeRoles
+        //                .SelectMany(er => er.Performances)
+        //                .Where(pf => pf.ContributionID != null)
+        //                .Select(pf => pf.Contribution.Description)
+        //                .Where(desc => !string.IsNullOrEmpty(desc))
+        //                .ToList(),
+        //            AverageEvaluationScore = emp.EmployeeRoles
+        //                .SelectMany(er => er.Performances)
+        //                .Where(pf => pf.EvaluationID != null)
+        //                .Select(pf => pf.Evaluation.Score)
+        //                .DefaultIfEmpty()
+        //                .Average()
+        //        });
+        //    // Filtering
+        //    if (!string.IsNullOrEmpty(searchTerm))
+        //    {
+        //        employees = employees.Where(e => e.EmployeeName.Contains(searchTerm) ||
+        //                                         e.Skills.Any(s => s.SkillName.Contains(searchTerm)) ||
+        //                                         e.Certifications.Any(c => c.CertificationName.Contains(searchTerm)) ||
+        //                                         e.Roles.Any(r => r.RoleName.Contains(searchTerm)) ||
+        //                                         e.ProjectNames.Any(pn => pn.Contains(searchTerm))); // Include project names in search
+        //    }
+        //    // Sorting
+        //    employees = sortBy switch
+        //    {
+        //        "name" => employees.OrderBy(e => e.EmployeeName),
+        //        "skill" => employees.OrderBy(e => e.Skills.FirstOrDefault().SkillName ?? ""),
+        //        "certification" => employees.OrderBy(e => e.Certifications.FirstOrDefault().CertificationName ?? ""),
+        //        "role" => employees.OrderBy(e => e.Roles.FirstOrDefault().RoleName ?? ""),
+        //        "avgEvaluationScore" => employees
+        //            .OrderByDescending(e => e.AverageEvaluationScore.HasValue ? e.AverageEvaluationScore.Value : double.MinValue),
+        //        _ => employees
+        //    };
+        //    return View(employees.ToList());
+        //}
+
+
+
         public IActionResult SkillCertificationMatrix(string searchTerm, string sortBy)
         {
             var employees = _context.People
@@ -179,13 +276,13 @@ namespace TeamInsights.Controllers
                 .Include(p => p.EmployeeRoles)
                     .ThenInclude(er => er.Performances)
                         .ThenInclude(pf => pf.Evaluation)
-                .Include(p => p.EmployeeRoles) // Include Performances for projects
+                .Include(p => p.EmployeeRoles)
                     .ThenInclude(er => er.Performances)
                         .ThenInclude(pf => pf.Project)
                 .Select(emp => new SkillCertificationMatrixViewModel
                 {
                     EmployeeID = emp.PersonID,
-                    EmployeeName = emp.FirstName,
+                    EmployeeName = emp.FirstName + " " + emp.LastName,
                     Skills = emp.EmployeeSkills.Select(es => new SkillEntry
                     {
                         SkillName = es.Skill.SkillName,
@@ -218,7 +315,7 @@ namespace TeamInsights.Controllers
                         .SelectMany(er => er.Performances)
                         .Where(pf => pf.ProjectID != null)
                         .Select(pf => pf.Project.ProjectName)
-                        .Distinct() // Avoid duplicate project names
+                        .Distinct()
                         .ToList(),
                     ContributionsCount = emp.EmployeeRoles
                         .SelectMany(er => er.Performances)
@@ -243,7 +340,7 @@ namespace TeamInsights.Controllers
                                                  e.Skills.Any(s => s.SkillName.Contains(searchTerm)) ||
                                                  e.Certifications.Any(c => c.CertificationName.Contains(searchTerm)) ||
                                                  e.Roles.Any(r => r.RoleName.Contains(searchTerm)) ||
-                                                 e.ProjectNames.Any(pn => pn.Contains(searchTerm))); // Include project names in search
+                                                 e.ProjectNames.Any(pn => pn.Contains(searchTerm)));
             }
             // Sorting
             employees = sortBy switch
@@ -256,8 +353,13 @@ namespace TeamInsights.Controllers
                     .OrderByDescending(e => e.AverageEvaluationScore.HasValue ? e.AverageEvaluationScore.Value : double.MinValue),
                 _ => employees
             };
+            // Pass the search term and sortBy to the view
+            ViewBag.SearchTerm = searchTerm;
+            ViewBag.SortBy = sortBy;
             return View(employees.ToList());
         }
+
+
         private bool EmployeeSkillExists(int id)
         {
             return _context.EmployeeSkills.Any(e => e.EmployeeSkillID == id);

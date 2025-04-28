@@ -57,8 +57,13 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>
+                            @* <td>
                                 @Html.DisplayFor(modelItem => item.FirstName)
+                            </td> *@
+                            <td>
+                                <a asp-action="Profile" asp-route-email="@item.Email">
+                                    @item.FirstName
+                                </a>
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.LastName)
