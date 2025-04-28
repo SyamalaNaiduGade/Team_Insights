@@ -1,114 +1,120 @@
 ﻿@model List<TeamInsights.ViewModels.SkillCertificationMatrixViewModel>
-
-
 <div class="container-fluid d-flex">
     <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
-
-<h1>Skill, Certification & Role Matrix</h1>
-<!-- Filtering & Sorting -->
-<form method="get">
-    <div class="row mb-3">
-        <div class="col-md-5">
-            <input type="text" name="searchTerm" placeholder="Search by employee, skill, certification, role, or project" class="form-control" />
-        </div>
-        <div class="col-md-5">
-            <select name="sortBy" class="form-control">
-                <option value="">Sort By</option>
-                <option value="name">Employee Name</option>
-                <option value="skill">Skill Name</option>
-                <option value="certification">Certification Name</option>
-                <option value="role">Role Name</option>
-                <option value="avgEvaluationScore">Average Evaluation Score (Descending)</option>
-            </select>
-        </div>
-        <div class="col-md-2">
+        <h1>Skill, Certification & Role Matrix</h1>
+        <!-- Filtering & Sorting -->
+        <form method="get">
+            <div class="row mb-3">
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <span class="input-group-text grayscale-search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </span>
+                        <input type="text" name="searchTerm"
+                               placeholder="Search by employee, skill, certification, role, or project"
+                               class="form-control"
+                               value="@ViewBag.SearchTerm" />
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <span class="input-group-text">Sort by:</span>
+                        <select name="sortBy" class="form-control">
+                            <option value="" selected="@(ViewBag.SortBy == "" ? "selected" : null)">None</option>
+                            <option value="name" selected="@(ViewBag.SortBy == "name" ? "selected" : null)">Employee Name</option>
+                            <option value="skill" selected="@(ViewBag.SortBy == "skill" ? "selected" : null)">Skill Name</option>
+                            <option value="certification" selected="@(ViewBag.SortBy == "certification" ? "selected" : null)">Certification Name</option>
+                            <option value="role" selected="@(ViewBag.SortBy == "role" ? "selected" : null)">Role Name</option>
+                            <option value="avgEvaluationScore" selected="@(ViewBag.SortBy == "avgEvaluationScore" ? "selected" : null)">Average Evaluation Score (Descending)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
                     <button type="submit" class="btn from-right">Apply</button>
-        </div>
-    </div>
-</form>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Employee</th>
-            <th>Projects</th>
-            <th>Roles</th>
-            <th>Skills</th>
-            <th>Certifications</th>
-            @* <th>Contributions Count</th> *@
-            <th>Contributions Description</th>
-            <th>Average Evaluation Score</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var employee in Model)
-        {
-            <tr>
-                <td>@employee.EmployeeName</td>
-                <td>
-                    <ul>
-                        @foreach (var projectName in employee.ProjectNames)
-                        {
-                            <li>
-                                <span class="badge bg-secondary">@projectName</span>
-                            </li>
-                        }
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        @foreach (var role in employee.Roles)
-                        {
-                            <li>
-                                <span class="badge bg-info">@role.RoleName</span>
-                                @if (role.AssignedDate.HasValue)
+                </div>
+            </div>
+        </form>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Employee</th>
+                    <th>Projects</th>
+                    <th>Roles</th>
+                    <th>Skills</th>
+                    <th>Certifications</th>
+                    <th>Contributions Description</th>
+                    <th>Average Evaluation Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Model)
+                {
+                    <tr>
+                        <td>@employee.EmployeeName</td>
+                        <td>
+                            <ul>
+                                @foreach (var projectName in employee.ProjectNames)
                                 {
-                                    <span> - Assigned: @role.AssignedDate.Value.ToString("yyyy-MM-dd")</span>
+                                    <li>
+                                        <span class="badge bg-secondary">@projectName</span>
+                                    </li>
                                 }
-                                <br />
-                                <small>
-                                    Contributions: @role.RoleContributionsCount<br />
-                                    @* Descriptions: @string.Join("; ", role.RoleContributionsDescriptions)<br />
-                            Avg. Eval. Score: @(role.AverageEvaluationScore.HasValue ? $"{role.AverageEvaluationScore.Value.ToString("F2")}/100" : "N/A") *@
-                                </small>
-                            </li>
-                        }
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        @foreach (var skill in employee.Skills)
-                        {
-                            <li>
-                                <span class="@GetSkillLevelClass(skill.SkillLevel)">
-                                    @skill.SkillName (@skill.SkillLevel)
-                                </span> @* - Acquired: @skill.AcquiredDate?.ToString("yyyy-MM-dd") *@
-                            </li>
-                        }
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        @foreach (var cert in employee.Certifications)
-                        {
-                            <li>
-                                <span class="badge bg-success">@cert.CertificationName</span> @* - Issued: @cert.IssuedDate?.ToString("yyyy-MM-dd") *@
-                            </li>
-                        }
-                    </ul>
-                </td>
-                @* <td>@employee.ContributionsCount</td> *@
-                <td>@string.Join("; ", employee.ContributionsDescriptions)</td>
-                <td>@(employee.AverageEvaluationScore.HasValue ? $"{employee.AverageEvaluationScore.Value.ToString("F2")}/100" : "N/A")</td>
-            </tr>
-        }
-    </tbody>
-</table>
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <p>
-        <a asp-action="Index" asp-controller="Home" class="btn from-right">Back</a>
-    </p>
-</div>
-</main>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                @foreach (var role in employee.Roles)
+                                {
+                                    <li>
+                                        <span class="badge bg-info">@role.RoleName</span>
+                                        @if (role.AssignedDate.HasValue)
+                                        {
+                                            <span> - Assigned: @role.AssignedDate.Value.ToString("yyyy-MM-dd")</span>
+                                        }
+                                        <br />
+                                        <small>
+                                            Contributions: @role.RoleContributionsCount<br />
+                                        </small>
+                                    </li>
+                                }
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                @foreach (var skill in employee.Skills)
+                                {
+                                    <li>
+                                        <span class="@GetSkillLevelClass(skill.SkillLevel)">
+                                            @skill.SkillName (@skill.SkillLevel)
+                                        </span>
+                                    </li>
+                                }
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                @foreach (var cert in employee.Certifications)
+                                {
+                                    <li>
+                                        <span class="badge bg-success">@cert.CertificationName</span>
+                                    </li>
+                                }
+                            </ul>
+                        </td>
+                        <td>@string.Join("; ", employee.ContributionsDescriptions)</td>
+                        <td>@(employee.AverageEvaluationScore.HasValue ? $"{employee.AverageEvaluationScore.Value.ToString("F2")}/100" : "N/A")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <p>
+                <a asp-action="Index" asp-controller="Home" class="btn from-right">Back</a>
+            </p>
+        </div>
+    </main>
 </div>
 <!-- Skill Level Color Coding -->
 @functions {
@@ -123,12 +129,3 @@
         };
     }
 }
-
-
-
-
-
-
-
-
-
