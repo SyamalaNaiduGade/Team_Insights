@@ -1,0 +1,193 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 4-8\\team_insights\\teaminsights\\teaminsights\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 4-8\\team_insights\\teaminsights\\teaminsights\\views\\home\\managers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\home\\managers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 4-8\\team_insights\\teaminsights\\teaminsights\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 4-8\\team_insights\\teaminsights\\teaminsights\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 4-8\\team_insights\\teaminsights\\teaminsights\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 4-8\\team_insights\\teaminsights\\teaminsights\\views\\employeeskills\\skillcertificationmatrix.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\employeeskills\\skillcertificationmatrix.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 4-8\\team_insights\\teaminsights\\teaminsights\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 4-8\\team_insights\\teaminsights\\teaminsights\\views\\people\\performance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\views\\people\\performance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|c:\\users\\erica\\onedrive\\documents\\isc 568\\repos\\clone 4-8\\team_insights\\teaminsights\\teaminsights\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{40784C08-116C-4FD5-8555-222D844E843D}|TeamInsights\\TeamInsights.csproj|solutionrelative:teaminsights\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Managers.cshtml",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Managers.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Home\\Managers.cshtml",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Managers.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Home\\Managers.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAIAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T02:26:32.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T02:26:31.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "TeamInsights\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "TeamInsights\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAACkBAAAAAAAAAAAiwEkBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-08T18:14:16.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "TeamInsights\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T02:09:36.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SkillCertificationMatrix.cshtml",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\EmployeeSkills\\SkillCertificationMatrix.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\EmployeeSkills\\SkillCertificationMatrix.cshtml",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\EmployeeSkills\\SkillCertificationMatrix.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\EmployeeSkills\\SkillCertificationMatrix.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T20:10:32.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T18:12:35.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T01:37:07.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Performance.cshtml",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\People\\Performance.cshtml",
+              "RelativeDocumentMoniker": "TeamInsights\\Views\\People\\Performance.cshtml",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\Views\\People\\Performance.cshtml",
+              "RelativeToolTip": "TeamInsights\\Views\\People\\Performance.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFsAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T20:03:45.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "TeamInsights\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\erica\\OneDrive\\Documents\\ISC 568\\Repos\\CLONE 4-8\\Team_Insights\\TeamInsights\\TeamInsights\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "TeamInsights\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-08T18:23:03.135Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

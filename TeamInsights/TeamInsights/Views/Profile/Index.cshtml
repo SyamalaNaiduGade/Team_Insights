@@ -1,0 +1,201 @@
+﻿@* @model TeamInsights.Models.Person
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 p-4">
+        <div class="row">
+            <!-- Profile Picture & Name -->
+            <div class="col-md-4 text-center">
+                <div class="position-relative">
+                    <img src="/images/default-avatar.jpg"
+                         alt="User Avatar"
+                         style="width: 155px; height: 155px;">
+                </div>
+                <h3 class="mt-1 text-primary fw-bold">@Model.FirstName @Model.LastName</h3>
+                <p class="text-muted">@Model.Email</p>
+            </div>
+
+            <!-- Profile Details -->
+            <div class="col-md-8">
+                <h4 class="text-secondary fw-bold">Profile Details</h4>
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td><i class="bi bi-envelope-fill text-primary"></i> <strong>Email:</strong></td>
+                            <td>@Model.Email</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-telephone-fill text-success"></i> <strong>Phone:</strong></td>
+                            <td>@Model.PhoneNumber</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-house-door-fill text-warning"></i> <strong>Address:</strong></td>
+                            <td>@Model.Street, @Model.City, @Model.State @Model.ZipCode</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-calendar-check-fill text-info"></i> <strong>Hire Date:</strong></td>
+                            <td>@Model.HireDate.ToString("MM/dd/yyyy")</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-briefcase-fill text-danger"></i> <strong>Experience:</strong></td>
+                            <td>@Model.Experience years</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-cash-stack text-success"></i> <strong>Salary:</strong></td>
+                            <td>@Model.Salary.ToString("C")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Skills, Roles, and Certifications -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h4 class="text-secondary fw-bold">Certifications</h4>
+                <ul class="list-group">
+                    @foreach (var certification in Model.EmployeeCertifications)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @certification.Certification.CertificationName
+                            <span class="badge bg-primary">✔</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="text-secondary fw-bold">Roles</h4>
+                <ul class="list-group">
+                    @foreach (var role in Model.EmployeeRoles)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @role.Role.RoleName
+                            <span class="badge bg-success">👔</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="text-secondary fw-bold">Skills</h4>
+                <ul class="list-group">
+                    @foreach (var skill in Model.EmployeeSkills)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @skill.Skill.SkillName
+                            <span class="badge bg-warning text-dark">Level: @skill.Skill.SkillLevel</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> *@
+
+                        @model TeamInsights.Models.Person
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<!-- Main content wrapper to align right of sidebar -->
+<div class="main-content" style="margin-left:px; padding: 2rem;">
+    <div class="card shadow-lg border-0 p-4" style="background-color: #fefefe;">
+        <div class="row">
+            <!-- Profile Picture -->
+            <div class="col-md-4 text-center">
+                <img src="/images/default-avatar.jpg"
+                     alt="User Avatar"
+                     class="rounded-circle shadow-sm"
+                     style="width: 155px; height: 155px; object-fit: cover;">
+                <h3 class="mt-3 text-primary fw-bold">@Model.FirstName @Model.LastName</h3>
+                <p class="text-muted">@Model.Email</p>
+            </div>
+
+            <!-- Profile Info -->
+            <div class="col-md-8">
+                <h4 class="text-secondary fw-bold mb-3">Profile Details</h4>
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td><i class="bi bi-envelope-fill text-primary"></i> <strong>Email:</strong></td>
+                            <td>@Model.Email</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-telephone-fill text-success"></i> <strong>Phone:</strong></td>
+                            <td>@Model.PhoneNumber</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-house-door-fill text-warning"></i> <strong>Address:</strong></td>
+                            <td>@Model.Street, @Model.City, @Model.State @Model.ZipCode</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-calendar-check-fill text-info"></i> <strong>Hire Date:</strong></td>
+                            <td>@Model.HireDate.ToString("MM/dd/yyyy")</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-briefcase-fill text-danger"></i> <strong>Experience:</strong></td>
+                            <td>@Model.Experience years</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-cash-stack text-success"></i> <strong>Salary:</strong></td>
+                            <td>@Model.Salary.ToString("C")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Additional Details -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h4 class="text-secondary fw-bold">Certifications</h4>
+                <ul class="list-group">
+                    @foreach (var certification in Model.EmployeeCertifications)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @certification.Certification.CertificationName
+                            <span class="badge bg-primary">✔</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="text-secondary fw-bold">Roles</h4>
+                <ul class="list-group">
+                    @foreach (var role in Model.EmployeeRoles)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @role.Role.RoleName
+                            <span class="badge bg-success">👔</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="text-secondary fw-bold">Skills</h4>
+                <ul class="list-group">
+                    @foreach (var skill in Model.EmployeeSkills)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @skill.Skill.SkillName
+                            <span class="badge bg-warning text-dark">Level: @skill.Skill.SkillLevel</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">

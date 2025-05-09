@@ -1,0 +1,51 @@
+﻿@model List<TeamInsights.Models.Person>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container-fluid d-flex">
+
+    <!-- Main Content -->
+    <main class="content-panel flex-grow-1 p-4 bg-white rounded-3 shadow-sm ms-3">
+        <h1>Managers</h1>
+
+        <div>
+
+            <section class="mb-4">
+                <h2 class="h4 fw-bold mb-3">Managers Summary</h2>
+                <div class="row g-4">
+                    @foreach (var manager in Model)
+                    {
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="bg-white shadow-sm rounded-3 p-4">
+                                <h3 class="h5 fw-semibold mb-1">@manager.FirstName @manager.LastName</h3>
+                                <p><strong>Email:</strong> @manager.Email</p>
+                                <p><strong>Hire Date:</strong> @manager.HireDate.ToString("dd-MM-yyyy")</p>
+                                <p><strong>Experience:</strong> @manager.Experience years</p>
+                                <p><strong>Employees:</strong> </p>
+
+                                <div class="mt-2 d-flex gap-2">
+                                    <a href="@Url.Action("Edit", "People", new { id = manager.PersonID })"
+                                       class="btn from-right btn-edit btn-sm">Edit</a>
+
+                                    <a href="@Url.Action("Details", "People", new { id = manager.PersonID })"
+                                       class="btn from-right btn-details btn-sm">Details</a>
+
+                                    <a href="@Url.Action("Delete", "People", new { id = manager.PersonID })"
+                                       class="btn from-right btn-delete btn-sm"
+                                       onclick="return confirm('Are you sure?')">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+            <p>
+                <a href="@Url.Action("Index", "Home")" class="btn from-right mt-5">Back to Dashboard</a>
+            </p>
+        </div>
+    </main>
+</div>
